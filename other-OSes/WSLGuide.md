@@ -19,6 +19,7 @@
     - [Accedere a Windows file system da WSL](#accedere-a-windows-file-system-da-wsl)
     - [Accedere al filesystem Linux da Windows](#accedere-al-filesystem-linux-da-windows)
   - [Cambiare la versione di WSL](#cambiare-la-versione-di-wsl)
+  - [Aggiornare la distribuzione di Ubuntu](#aggiornare-la-distribuzione-di-Ubuntu)
 - [Risoluzione dei problemi](#risoluzione-dei-problemi)
   - [Fallimento nella creazione dello user su Ubuntu](#fallimento-nella-creazione-dello-user-su-ubuntu)
   - [sudo apt update fallisce "Temporary failure resolving 'archive.ubuntu.com'"](#sudo-apt-update-fallisce-temporary-failure-resolving-archiveubuntucom)
@@ -126,7 +127,7 @@ Batti Invio per eseguire il comando.
 
 ### 6. Installare una distribuzione Linux
 
-Apri il Microsoft Store e cerca la distribuzione preferita di Linux. Per il corso la distribuzione consigliata è [Ubuntu 20.04 LTS](https://www.microsoft.com/store/apps/9n6svws3rx71).
+Apri il Microsoft Store e cerca la distribuzione preferita di Linux. Per il corso la distribuzione consigliata è [Ubuntu 20.04 LTS](https://www.microsoft.com/store/productId/9PDXGNCFSCZV)).
 
 Nella pagina della distribuzione fai clic su "Ottieni" per scaricarla e installarla.
 
@@ -277,6 +278,21 @@ Per esempio, se avessimo installato una distribuzione Ubuntu con WSL 1 e volessi
 ```
 
 > Si ricorda che per poter aggiornare a WSL 2 è necessario aver attivato la funzionalità aggiuntiva "Virtual Machine Platform" come spiegato nel punto 1 della guida.
+
+## Aggiornare la distribuzione di Ubuntu
+
+Se in seguito all'installazione, la versione di Ubuntu installata non è la più recente, è possibile aggiornarla da linea di comando.
+
+Per verificare la versione installata eseguire il seguente comando da WSL:
+
+```bash
+$ cat /etc/os-release
+```
+Se `VERSION_ID` non è minore di 22.04 è possibile aggiornare con il seguente comando:
+
+```bash
+$ sudo do-release-upgrade
+``
 
 # Risoluzione dei problemi
 
