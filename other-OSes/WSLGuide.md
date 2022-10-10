@@ -127,7 +127,7 @@ Batti Invio per eseguire il comando.
 
 ### 6. Installare una distribuzione Linux
 
-Apri il Microsoft Store e cerca la distribuzione preferita di Linux. Per il corso la distribuzione consigliata è [Ubuntu 20.04 LTS](https://www.microsoft.com/store/productId/9PDXGNCFSCZV)).
+Apri il Microsoft Store e cerca la distribuzione preferita di Linux. Per il corso la distribuzione consigliata è [Ubuntu 22.04 LTS](https://www.microsoft.com/store/productId/9PDXGNCFSCZV)).
 
 Nella pagina della distribuzione fai clic su "Ottieni" per scaricarla e installarla.
 
