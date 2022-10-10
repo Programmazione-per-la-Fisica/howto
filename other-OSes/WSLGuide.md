@@ -292,7 +292,7 @@ Se `VERSION_ID` non è minore di 22.04 è possibile aggiornare con il seguente c
 
 ```bash
 $ sudo do-release-upgrade
-``
+```
 
 # Risoluzione dei problemi
 
