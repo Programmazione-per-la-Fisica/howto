@@ -2,8 +2,8 @@
 
 Questa repository contiene la documentazione necessaria per configurare
 l'ambiente di lavoro per l'insegnamento di
-_[Programmazione per la Fisica](https://github.com/giacomini/pf2022)_, corso
-di laurea in Fisica, Università di Bologna, Anno Accademico 2022/2023.
+_[Programmazione per la Fisica](https://github.com/Programmazione-per-la-Fisica/pf2022)_,
+corso di laurea in Fisica, Università di Bologna, Anno Accademico 2022/2023.
 
 Il contenuto della repository è scaricabile sul proprio computer usando il
 comando `git`:
@@ -23,7 +23,7 @@ Gli strumenti software minimi richiesti sono:
 * version control: `git`
 * compilatore C++: `g++`
 * formattatore di codice: `clang-format`
-* editor/IDE: _Visual Studio Code_ ([consigliato](#editor), possibili
+* editor/IDE: _Visual Studio Code_ ([vivamente consigliato](#editor), possibili
   alternative sono: `nano`, `vi`, `emacs`)
 
 La shell è disponibile già con l'installazione di default di Ubuntu. Gli altri
