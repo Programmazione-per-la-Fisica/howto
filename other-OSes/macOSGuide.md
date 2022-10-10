@@ -132,7 +132,7 @@ Questo comando, nell'ordine, installa:
 Il comando che gli utenti macOS utilizzeranno per la compilazione del codice C++ è `g++-12` (tutto attaccato), non `g++`,
 come verrà di solito indicato durante il corso. Per questo motivo, poco sopra, abbiamo verificato la versione di `gcc`.
 
-> **NOTA**: il comando `g++` è probabilmente disponibile, ma è un _alias_ per un altro compilatore.
+> :warning: Il comando `g++` è probabilmente disponibile, ma è un _alias_ per un altro compilatore.
 > Qualora ti venisse suggerito durante il corso di utilizzare quest'ultimo al posto di  gcc, sarà necessario specificare esplicitamente
 > l'opzione di compilazione `-std=c++17`; il comando da utilizzare diventerebbe quindi  `g++ -std=c++17`.
 
@@ -216,7 +216,7 @@ comando:
 % brew outdated
 ```
 
-> **Nota:** la situazione è ben diversa quando si parla di update della release del sistema operativo (ad es.
+> :warning: La situazione è ben diversa quando si parla di update della release del sistema operativo (ad es.
 > il passaggio da _macOS Big Sur_ a _macOS Monterey_).
 > **Prima di procedere ad un cambiamento tanto radicale** è buona norma **assicurarsi in anticipo che i programmi che utilizziamo**
 > normalmente **siano compatibili con la nuova versione del sistema operativo**.
@@ -242,7 +242,7 @@ procedi come segue:
 2. prova di nuovo ad abilitare l'esecuzione dell'applicazione da Terminale  seguendo le istruzioni riportate
    [qui](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
 
-> **NOTA**: qualora ti venga richiesto di digitare la password, o di confermare il comando utilizzando il lettore di
+> :warning: Qualora ti venga richiesto di digitare la password, o di confermare il comando utilizzando il lettore di
 > impronte digitali, procedi pure senza esitazioni.
 
 A questo punto, prova di nuovo ad eseguire il comando `code` da terminale:
