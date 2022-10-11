@@ -144,7 +144,7 @@ git version 2.37.3
 ```
 
 ```zsh
-g++-12 --version
+% g++-12 --version
 g++-12 (Homebrew GCC 12.2.0) 12.2.0
 Copyright (C) 2022 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
