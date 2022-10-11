@@ -2,11 +2,13 @@
 
 ## Table of contents
 
-- [Installation](#installation)
-  - [Proceed via binary distribution (warmly recommended)](#proceed-via-binary-distribution-warmly-recommended)
-  - [Proceed via source code](#proceed-via-source-code)
-  - [Other installation methods (not recommended)](#other-installation-methods-not-recommended)
-- [Installation check](#installation-check)
+- [ROOT framework installation on Ubuntu operating system](#root-framework-installation-on-ubuntu-operating-system)
+  - [Table of contents](#table-of-contents)
+  - [Installation](#installation)
+    - [Proceed via binary distribution (warmly recommended)](#proceed-via-binary-distribution-warmly-recommended)
+    - [Proceed via source code](#proceed-via-source-code)
+    - [Other installation methods (not recommended)](#other-installation-methods-not-recommended)
+  - [Installation check](#installation-check)
 
 ## Installation
 
@@ -28,7 +30,7 @@ sudo apt install git dpkg-dev cmake g++ gcc binutils libx11-dev libxpm-dev libxf
 Other not mandatory, but recommended are:
 
 ```shell
-sudo apt install gfortran libssl-dev libpcre3-dev xlibmesa-glu-dev libglew1.5-dev libftgl-dev libmysqlclient-dev libfftw3-dev libcfitsio-dev graphviz-dev libavahi-compat-libdnssd-dev libldap2-dev python-dev libxml2-dev libkrb5-dev libgsl0-dev
+sudo apt install gfortran libssl-dev libpcre3-dev xlibmesa-glu-dev libftgl-dev libmysqlclient-dev libfftw3-dev libcfitsio-dev graphviz-dev libavahi-compat-libdnssd-dev libldap2-dev python2-dev libxml2-dev libkrb5-dev libgsl0-dev
 ```
 
 > :warning: Please note that it is warmly suggested to install also the prerequisite packages in order to avoid encountering future ROOT errors about libraries paths not found.
