@@ -29,7 +29,7 @@ sudo apt-get install libtiff5 x11-apps
 
 > :warning: You may encounter a new error `libtinfo.so.5: cannot open shared object file: No such file or directory`. In this case you can easily solve it by downloading that single library separately with this command `sudo apt-get install libncurses5`.
 
-If you don't have Windows 11 installed you have now to set the display variable and proceed with this section. Otherwise skip it and go to the [Installation Check](#installation-check)
+If you don't have Windows 11 installed you have now to set the display variable and proceed with this section. Otherwise skip it and go to the [Installation Check](#installation-check).
 
 > :warning: If you already set this variable in the past, this last passage is not necessary and you can skip it.
 
