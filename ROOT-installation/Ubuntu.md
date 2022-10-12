@@ -45,7 +45,7 @@ Once you have completed the prerequisites you can proceed with the real installa
 
 > :warning: To know the operating system version of your computer simply type this command on the shell: `lsb_release -a`.
 
-To download the release copy the link of the zipped file under the "Files" column (in the ROOT web page) and use the `wget` command in the terminal (see next warnings):
+To download the release copy the link of the zipped file under the "Files" column (in the ROOT web page) and use the `wget` command in the terminal (pay attention to the next warning also):
 
 ```shell
 wget https://root.cern/download/root_vx.xx.xx.Linux-ubuntuxx-x86_64-gccx.x.tar.gz
