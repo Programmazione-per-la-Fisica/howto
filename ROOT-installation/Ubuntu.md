@@ -56,8 +56,8 @@ wget https://root.cern/download/root_vx.xx.xx.Linux-ubuntuxx-x86_64-gccx.x.tar.g
 Now unzip it by typing these two commands:
 
 ```shell
-gunzip root_vx.xx.xx.Linux-ubuntu18-x86_64-gccx.x.tar.gz
-tar -xvf root_vx.xx.xx.Linux-ubuntu18-x86_64-gccx.x.tar
+gunzip root_vx.xx.xx.Linux-ubuntuxx-x86_64-gccx.x.tar.gz
+tar -xvf root_vx.xx.xx.Linux-ubuntuxx-x86_64-gccx.x.tar
 ```
 
 > :warning: Remember again to replace the `x` with the version numbers.
