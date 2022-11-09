@@ -9,6 +9,7 @@
   - [Aggiornamenti dei software installati](#aggiornamenti-dei-software-installati)
   - [Risoluzione dei problemi](#risoluzione-dei-problemi)
     - [Non è possibile lanciare VSCode da terminale](#non-è-possibile-lanciare-vscode-da-terminale)
+    - [Metodi alternativi di compilazione del codice _C++_](#metodi-alternativi-di-compilazione-del-codice-c)
     - [Non è possibile utilizzare i comandi installati tramite Homebrew](#non-è-possibile-utilizzare-i-comandi-installati-tramite-homebrew)
 
 Questa guida contiene le istruzioni da seguire per configurare, all'interno del sistema operativo _macOS_, un ambiente di
@@ -58,7 +59,7 @@ Per l'installazione dei prodotti software necessari per il corso useremo princip
 
 Per l'uso di brew sono richiesti alcuni prerequisiti:
 
-- macOS Catalina (10.15) o superiore
+- macOS macOS Big Sur (11) o superiore
 - i CLT di Xcode, la cui installazione è stata [appenda discussa](#prerequisito-i-command-line-tools-di-xcode)
 
 Una volta installati i CLT, installa brew eseguendo, sempre sul Terminale, il seguente comando:
@@ -251,6 +252,18 @@ A questo punto, prova di nuovo ad eseguire il comando `code` da terminale:
 % code
 ```
 
+### Metodi alternativi di compilazione del codice _C++_
+
+Come discusso in questa guida e ripetuto durante i laboratori, chi usa mac OS dovrebbe preferenzialmente utilizzare il comando `g++-12`
+per la compilazione del codice sviluppato.
+
+In caso questo non funzioni, nel breve periodo (es.: durante un dato laboratorio), puoi tentare di compilare il codice sostituendo al comando `g++-12` la
+seguente coppia di comando ed opzione `g++ -std=c++17`, lasciando tutte le altre opzioni e gli argomenti che avresti utilizzato per la compilazione invariati.
+
+In ogni caso, nel medio termine (es.: nei giorni successivi al laboratorio), il problema con `g++-12` va risolto.
+Riferisciti alle istruzioni [qui sotto](#non-è-possibile-utilizzare-i-comandi-installati-tramite-homebrew) e sentiti libero di contattare
+[i docenti](https://virtuale.unibo.it/mod/page/view.php?id=1045205)
+
 ### Non è possibile utilizzare i comandi installati tramite Homebrew
 
 Qualora, i programmi installati tramite `brew` smettano di funzionare (ad es.: `gcc`, `root`, etc ...), per
@@ -262,5 +275,48 @@ Your system is ready to brew.
 ```
 
 Qualora l'output del comando sia differente da quello di cui sopra, `brew doctor` dovrebbe comunque fornirti
-suggerimenti in merito a come procedere. In caso questi non siano chiari, o per qualsiasi dubbio, contatta
-[i titolari dei moduli di laboratorio](mailto:carlo.battilana2@unibo.it,fabio.ferrari17@unibo.it) del corso.
+suggerimenti in merito a come procedere.
+
+In caso `brew doctor` non aiuti, puoi tentare le seguenti azioni:
+
+> :exclamation: Per qualsiasi dubbio, o anche solo perché preferisci che qualcuno ti assista durante i tentativi, puoi sempre contattare
+> [i titolari dei moduli di laboratorio](https://virtuale.unibo.it/mod/page/view.php?id=1045205) del corso.
+
+**Aggiornare la versione di `brew` ed i pacchetti installati:**
+
+Come discusso sopra, puoi farlo eseguendo i comandi:
+
+```zsh
+% brew update
+% brew upgrade
+```
+
+**Verificare lo stato di installazione degli xcode CLT:**
+
+In primis esegui il comando:
+
+```zsh
+% xcode-select --install
+xcode-select: error: command line tools are already installed, use "Software Update" to install updates
+```
+
+In caso sia necessaria una nuova installazione, il comando eseguito provvederà ad iniziarla.
+
+In caso il comando restituisca l'output che abbiamo riportato, puoi verificare la presenza di aggiornamenti da installare con:
+
+```zsh
+% softwareupdate --list       
+Software Update Tool
+
+Finding available software
+No new software available.
+```
+
+In caso caso ci siano aggiornamenti da effettuare (nel caso mostrato sopra non ce ne sono), e tra questi risultino i CLT o Xcode, puoi installarli tramite il seguente comando::
+
+```zsh
+% softwareupdate --install -v <nome nel programma da installare>
+```
+
+> :warning: Come riportato sopra, qualora vengano proposti da `softwareupdate` evita aggiornamenti della release del sistema operativo (ad es.
+> il passaggio da _macOS Big Sur_ a _macOS Monterey_).
