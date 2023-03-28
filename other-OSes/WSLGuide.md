@@ -304,10 +304,20 @@ Se all'avvio di WSL il prompt è simile a:
 root@LAPTOP:~$
 ```
 
-indicando root come nome utente, vuol dire che nell'installazione si è saltato (accidentalmente) il passaggio di creazione di un utente.
+indicando root come nome utente, vuol dire che l'utente di default non è stato configurato correttamente.
 
-In tal caso è necessario ripristinare la distribuzione. In Impostazioni > App > App e funzionalità individuare Ubuntu. Cliccare su Ubuntu e selezionare Opzioni avanzate. Nella nuova schermata selezionare Ripristina... e Reimposta.
-Dopo di che riprendere l'installazione da [Configurare la distribuzione](#configurare-la-distribuzione)
+Per risolvere, aprire Powershell come amministratore e eseguire il comando:
+
+```powershell
+> ubuntu.exe config --default-user <NOME-UTENTE>
+```
+
+> Può essere necessario variare il comando in base alla distribuzione di linux installata (i.e. `ubuntu-2204.exe`). Si suggerisce di sfruttare il completamento automatico per individuare il comando corretto, digitando per esempio `ubuntu` seguito dal tasto ⇆ (tab). 
+
+> Il nome utente  DEVE essere quello indicato in fase di installazione. Nel caso in cui non ci si ricordasse il nome utente, è possibile leggere l'elenco degli utenti con: `cat /etc/passwd`. Il proprio utente sarà tra gli ultimi presenti nella lista.
+
+
+
 
 ## sudo apt update fallisce "Temporary failure resolving 'archive.ubuntu.com'"
 
@@ -336,14 +346,14 @@ Si può verificare il problema verificando lo stato della `Virtualizzazione` nel
 
 Se Virtualizzazione è indicato come disabilitato è necessario abilitarlo da BIOS. 
 
-## Impossibile avviare code su WSL, "Input/output error; VS Code Server for WSL closed unexpectedly"
+## Impossibile avviare VSCode su WSL, con il comando `code`
 
 VSCode server è impostato erroneamente, chiudere WSL e VSCode.
 
-Lanciare Powershell come amministratore ed eseguire il seguente comando:
+Da Powershell ed eseguire il seguente comando:
 
 ```powershell
 > wsl.exe --shutdown
 ```
 
-Dopodiché riavviare VSCode e aprire una nuova finestra su WSL cliccando sul bottone verde in basso a sinistra.
+Dopodiché riavviare VSCode **da Windows** e aprire una nuova finestra su WSL cliccando sul bottone verde in basso a sinistra e selezionando "Connect to WSL" dal menù a tendina.
