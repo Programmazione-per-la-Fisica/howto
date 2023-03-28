@@ -309,7 +309,7 @@ indicando root come nome utente, vuol dire che l'utente di default non è stato 
 Per risolvere, aprire Powershell come amministratore e eseguire il comando:
 
 ```powershell
-> ubuntu.exe config --default-user <NOME-UTENTE>
+> ubuntu.exe config --default-user <USERNAME>
 ```
 
 > Può essere necessario variare il comando in base alla distribuzione di linux installata (i.e. `ubuntu-2204.exe`). Si suggerisce di sfruttare il completamento automatico per individuare il comando corretto, digitando per esempio `ubuntu` seguito dal tasto ⇆ (tab). 
@@ -346,7 +346,7 @@ Si può verificare il problema verificando lo stato della `Virtualizzazione` nel
 
 Se Virtualizzazione è indicato come disabilitato è necessario abilitarlo da BIOS. 
 
-## Impossibile avviare VSCode su WSL, con il comando `code`
+## Impossibile avviare VSCode su WSL con il comando `code`
 
 VSCode server è impostato erroneamente, chiudere WSL e VSCode.
 
