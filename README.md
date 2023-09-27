@@ -1,9 +1,17 @@
+<!-- omit in toc -->
 # Howto
+
+- [Piattaforma di riferimento](#piattaforma-di-riferimento)
+- [Strumenti software necessari](#strumenti-software-necessari)
+- [Altre piattaforme](#altre-piattaforme)
+- [Editor](#editor)
+- [Introduzione a Linux e all'uso della shell](#introduzione-a-linux-e-alluso-della-shell)
+- [Appendice: ROOT](#appendice-root)
 
 Questa repository contiene la documentazione necessaria per configurare
 l'ambiente di lavoro per l'insegnamento di
-_[Programmazione per la Fisica](https://github.com/Programmazione-per-la-Fisica/pf2022)_,
-corso di laurea in Fisica, Università di Bologna, Anno Accademico 2022/2023.
+_[Programmazione per la Fisica](https://github.com/Programmazione-per-la-Fisica/pf2023)_,
+corso di laurea in Fisica, Università di Bologna, Anno Accademico 2023/2024.
 
 Il contenuto della repository è scaricabile sul proprio computer usando il
 comando `git`:
@@ -17,13 +25,15 @@ git clone https://github.com/Programmazione-per-la-Fisica/howto.git
 La piattaforma di riferimento del corso è la distribuzione
 **Linux Ubuntu 22.04**.
 
+## Strumenti software necessari
+
 Gli strumenti software minimi richiesti sono:
 
-* shell: `bash`
-* version control: `git`
-* compilatore C++: `g++`
-* formattatore di codice: `clang-format`
-* editor/IDE: _Visual Studio Code_ ([vivamente consigliato](#editor), possibili
+- shell: `bash`
+- version control: `git`
+- compilatore C++: `g++`
+- formattatore di codice: `clang-format`
+- editor/IDE: _Visual Studio Code_ ([vivamente consigliato](#editor), possibili
   alternative sono: `nano`, `vi`, `emacs`)
 
 La shell è disponibile già con l'installazione di default di Ubuntu. Gli altri
@@ -47,29 +57,14 @@ L'installazione è altrettanto semplice:
 sudo apt install cmake libsfml-dev
 ```
 
-Per prendere familiarità con Linux si suggeriscono le seguenti guide:
-
-* [Introduzione a
-  Linux](https://www.sci.unich.it/~amato/teaching/old/labdati10/lezioni/linux/linux.php)
-  è una sintetica introduzione a Linux e alla shell, scritta dal prof. Gianluca
-  Amato dell'Università di Chieti per un corso di "Laboratorio di Sistemi
-  Operativi". Il testo è un po' datato e la pagina presenta qualche errore di
-  formattazione, ma il contenuto è ancora valido.
-* [Linux tutorial](https://ryanstutorials.net/linuxtutorial/) è una guida
-  esauriente a Linux e alla Bash scritta da Ryan Chadwick. I capitoli "The
-  Command Line", "Basic Navigation", "File Manipulation" contengono informazioni
-  essenziali; gli altri possono essere approfonditi con calma; alcuni ("Vi Text
-  Editor", "Scripting") possono essere considerati superflui per questo corso
-  (ma comunque utili).
-
 ## Altre piattaforme
 
 Prodotti software analoghi sono disponibili su altre piattaforme di uso comune,
 quali Windows e macOS:
 
-* **Windows**: si suggerisce di installare il _Windows Subsystem for Linux_,
+- **Windows**: si suggerisce di installare il _Windows Subsystem for Linux_,
   seguendo [questa guida](other-OSes/WSLGuide.md);
-* **macOS**: essendo simile a Linux, la configurazione è semplificata ed è
+- **macOS**: essendo simile a Linux, la configurazione è semplificata ed è
   illustrata in [questa guida](other-OSes/macOSGuide.md).
 
 ## Editor
@@ -78,7 +73,24 @@ Per uniformità tra tutte le piattaforme, l'editor consigliato è _[Visual Studi
 Code](https://code.visualstudio.com/)_. Si rimanda alla pagina indicata per
 l'installazione.
 
-### ROOT
+## Introduzione a Linux e all'uso della shell
+
+Per prendere familiarità con Linux si suggeriscono le seguenti guide:
+
+- [Introduzione a
+  Linux](https://www.sci.unich.it/~amato/teaching/old/labdati10/lezioni/linux/linux.php)
+  è una sintetica introduzione a Linux e alla shell, scritta dal prof. Gianluca
+  Amato dell'Università di Chieti per un corso di "Laboratorio di Sistemi
+  Operativi". Il testo è un po' datato e la pagina presenta qualche errore di
+  formattazione, ma il contenuto è ancora valido.
+- [Linux tutorial](https://ryanstutorials.net/linuxtutorial/) è una guida
+  esauriente a Linux e alla Bash scritta da Ryan Chadwick. I capitoli "The
+  Command Line", "Basic Navigation", "File Manipulation" contengono informazioni
+  essenziali; gli altri possono essere approfonditi con calma; alcuni ("Vi Text
+  Editor", "Scripting") possono essere considerati superflui per questo corso
+  (ma comunque utili).
+
+## Appendice: ROOT
 
 Oltre agli strumenti necessari per il corso, sono fornite
 [delle guide](ROOT-installation) per l'installazione del [framework di analisi
