@@ -1,11 +1,15 @@
 # Configurazione dell'ambiente di lavoro su macOS
 
 - [Configurazione dell'ambiente di lavoro su macOS](#configurazione-dellambiente-di-lavoro-su-macos)
-  - [Prerequisito: i Command Line Tools di Xcode](#prerequisito-i-command-line-tools-di-xcode)
+  - [Prerequisito: Xcode ed i Command Line Tools](#prerequisito-xcode-ed-i-command-line-tools)
   - [Installazione di Homebrew](#installazione-di-homebrew)
+    - [Verifica dell'installazione di Homebrew](#verifica-dellinstallazione-di-homebrew)
   - [Installazione degli strumenti di base](#installazione-degli-strumenti-di-base)
+    - [Verifica dell'installazione degli strumenti di base](#verifica-dellinstallazione-degli-strumenti-di-base)
   - [Installazione di Visual Studio Code](#installazione-di-visual-studio-code)
+    - [Verifica dell'installazione di Visual Studio Code](#verifica-dellinstallazione-di-visual-studio-code)
   - [Installazione di componenti aggiuntivi](#installazione-di-componenti-aggiuntivi)
+    - [Verifica dell'installazione dei componenti aggiuntivi](#verifica-dellinstallazione-dei-componenti-aggiuntivi)
   - [Aggiornamenti dei software installati](#aggiornamenti-dei-software-installati)
   - [Risoluzione dei problemi](#risoluzione-dei-problemi)
     - [Non è possibile lanciare VSCode da terminale](#non-è-possibile-lanciare-vscode-da-terminale)
@@ -18,7 +22,44 @@ lavoro adatto al corso di Programmazione per la Fisica.
 La configurazione risulta relativamente semplice, in quanto macOS è un sistema operativo per molti versi simile a Linux
 e fa parte della famiglia Unix.
 
-> **Nota alla riga di comando**
+## Prerequisito: Xcode ed i Command Line Tools
+
+I _Command Line Tools (CLT) di Xcode_ sono necessari per procedere con l'installazione di tutti gli strumenti di lavoro.
+
+In aggiunta è necessario effettuare un'installazione completa di _Xcode_ per installare il framework di analisi _ROOT_ il
+quale, sebbene non necessario durante questo corso, verrà utilizzato in altri insegnamenti.
+
+Se non lo hai già fatto, puoi installare _Xcode_ seguendo queste istruzioni:
+
+1. apri la pagina relativa ad [Xcode](https://apps.apple.com/us/app/xcode/id497799835) tramite il browser;
+2. una volta aperta, segui le indicazioni e utilizza il programma _Mac App Store_ per procedere con l'installazione;
+3. si avvierà una finestra di dialogo che ti permetterà di completare il processo.
+
+A seconda delle risorse (ad es. connessione) disponibili, il processo può richiedere abbastanza tempo (alcune decine di
+minuti o più).
+
+Se possibile, **raccomandiamo di effettuare questa parte dell'installazione già a casa**, prima di presentarsi in laboratorio,
+dove saranno poi completati il resto dell'installazione e della configurazione.
+
+## Installazione di Homebrew
+
+Per l'installazione dei prodotti software necessari per il corso useremo principalmente il _package manager_ [`Homebrew`](https://brew.sh/)
+(in breve _brew_).
+
+Per l'uso di brew sono richiesti alcuni prerequisiti:
+
+- Un _Mac_ con processore 64-bit Intel o Apple Silicon
+- macOS Monterey (12) o superiore
+- i CLT di Xcode (o Xcode), la cui installazione è stata [appenda discussa](#prerequisito-xcode-ed-i-command-line-tools)
+
+Installa brew, aprendo l'applicazione Terminale (o Terminal) che si trova in Applicazioni &rarr; Utility (o Applications &rarr; Utility) ed
+eseguendo il seguente comando:
+
+```zsh
+% /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+
+> :exclamation: **Nota alla riga di comando**
 >
 > Quando indicato nel testo, potrebbe essere necessario inserire un comando da un'applicazione detta _Terminale_.
 >
@@ -29,48 +70,12 @@ e fa parte della famiglia Unix.
 > Seppur riportato nella guida, non si deve inserire il simbolo di prompt nello scrivere i comandi presentati in seguito.
 >
 > Dopo aver inserito un comando è possibile eseguirlo battendo il tasto _Invio_.
+>
+> :warning: Se, durante l'installazione, vedi errori relativi al comando `curl` che si lamenta di verifica di certificati,
+> prova ad aprire l'URL corrispondente dentro Safari, visualizza il certificato e accettalo "fidandoti sempre". Poi
+> riprova il comando indicato sopra.
 
-## Prerequisito: i Command Line Tools di Xcode
-
-I _Command Line Tools (CLT) di Xcode_ sono necessari per procedere con l'installazione di tutti gli strumenti di lavoro.
-
-Se non hai già installato i CLT, puoi farlo seguendo queste istruzioni:
-
-1. apri l'applicazione Terminale (o Terminal) che si trova in Applicazioni &rarr; Utility (o Applications &rarr; Utility)
-2. una volta aperta, esegui il comando: `xcode-select --install` (ricordati di premere invio dopo aver copiato la riga)
-3. si avvierà una finestra di dialogo che ti permette di effettuare l'installazione.
-
-Alternativamente, puoi ottenere i CLT in uno dei seguenti modi (le opzioni sono esclusive):
-
-- scarica il prodotto da [https://developer.apple.com/downloads](https://developer.apple.com/downloads)
-- come parte di [Xcode](https://itunes.apple.com/us/app/xcode/id497799835) stesso
-
-A seconda dell'opzione scelta e delle risorse (ad es. connessione) disponibili, il processo può richiedere abbastanza
-tempo (alcune decine di minuti o più). Questo vale sia per un'installazione completa di Xcode, sia in caso ci si limiti
-all'installazione dei CLT.
-
-Pertanto **raccomandiamo di effettuare questa parte dell'installazione già a casa**, prima di presentarsi in laboratorio,
-dove saranno poi completati il resto dell'installazione e della configurazione.
-
-## Installazione di Homebrew
-
-Per l'installazione dei prodotti software necessari per il corso useremo principalmente il _package manager_ [`Homebrew`](https://brew.sh/)
-(in breve _brew_).
-
-Per l'uso di brew sono richiesti alcuni prerequisiti:
-
-- macOS macOS Big Sur (11) o superiore
-- i CLT di Xcode, la cui installazione è stata [appenda discussa](#prerequisito-i-command-line-tools-di-xcode)
-
-Una volta installati i CLT, installa brew eseguendo, sempre sul Terminale, il seguente comando:
-
-```zsh
-% /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-```
-
-Se, durante l'installazione, vedi errori relativi al comando `curl` che si lamenta di verifica di certificati,
-prova ad aprire l'URL corrispondente dentro Safari, visualizza il certificato e accettalo "fidandoti sempre". Poi
-riprova il comando indicato sopra.
+### Verifica dell'installazione di Homebrew
 
 Per verificare che l'installazione di brew sia andata a buon fine, esegui il comando:
 
@@ -107,11 +112,11 @@ Le istruzioni esatte **sono riportate, sul Terminale, nelle ultime righe dell'ou
 
 Una volta terminata l'installazione di brew, puoi installare gli strumenti software necessari per il corso.
 
-Innanzitutto, verifica la versione più recente disponibile del compilatore _gcc_ (verosimilmente, la versione 12):
+Innanzitutto, verifica la versione più recente disponibile del compilatore _gcc_ (verosimilmente, la versione 13):
 
 ```zsh
 % brew info gcc
-==> gcc: stable 12.2.0 (bottled), HEAD
+==> gcc: stable 13.2.0 (bottled), HEAD
 GNU compiler collection
 https://gcc.gnu.org/
 ...
@@ -130,35 +135,37 @@ Questo comando, nell'ordine, installa:
 - [clang-format](https://www.kernel.org/doc/html/latest/translations/it_IT/process/clang-format.html), uno strumento che
   verifica la buona formattazione del codice
 
-Il comando che gli utenti macOS utilizzeranno per la compilazione del codice C++ è `g++-12` (tutto attaccato), non `g++`,
-come verrà di solito indicato durante il corso. Per questo motivo, poco sopra, abbiamo verificato la versione di `gcc`.
-
+> :exclamation: Il comando che gli utenti macOS utilizzeranno per la compilazione del codice C++ è `g++-13` (tutto attaccato), non `g++`,
+> come verrà di solito indicato durante il corso. Per questo motivo, poco sopra, abbiamo verificato la versione di `gcc`.
+>
 > :warning: Il comando `g++` è probabilmente disponibile, ma è un _alias_ per un altro compilatore.
 > Qualora ti venisse suggerito durante il corso di utilizzare quest'ultimo al posto di  gcc, sarà necessario specificare esplicitamente
 > l'opzione di compilazione `-std=c++17`; il comando da utilizzare diventerebbe quindi  `g++ -std=c++17`.
+
+### Verifica dell'installazione degli strumenti di base
 
 Per verificare la corretta installazione dei pacchetti appena descritti, eseguire i seguenti comandi:
 
 ```zsh
 % git --version
-git version 2.37.3
+git version 2.42.0
 ```
 
 ```zsh
-% g++-12 --version
-g++-12 (Homebrew GCC 12.2.0) 12.2.0
-Copyright (C) 2022 Free Software Foundation, Inc.
+% g++-13 --version
+g++-13 (Homebrew GCC 13.2.0) 13.2.0
+Copyright (C) 2023 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
 
 ```zsh
 % clang-format --version
-clang-format version 14.0.6
+clang-format version 17.0.1
 ```
 
-I numeri di versione riportati sopra sono solo indicativi, e possono variare nel tempo, quello che è importante è che nessuno
-dei tentativi di esecuzione termini con un errore del tipo `zsh: command not found`.
+I numeri di versione riportati sopra sono solo indicativi, e possono variare nel tempo, **quello che è importante**
+è che **nessuno dei tentativi** di esecuzione **termini con un errore del tipo** `zsh: command not found`.
 
 ## Installazione di Visual Studio Code
 
@@ -171,6 +178,8 @@ Alcune note in merito all'installazione:
   descritto [qui](https://code.visualstudio.com/docs/setup/mac#_installation)
 - abilita l'esecuzione dell'applicazione da Terminale seguendo le istruzioni riportate
     [qui](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
+
+### Verifica dell'installazione di Visual Studio Code
 
 Per verificare la corretta installazione di VSCode, provare ad aprirlo eseguendo il seguente comando
 
@@ -194,10 +203,34 @@ Nel caso di macOS, è possibile installare anche queste componenti aggiuntive tr
 % brew install cmake sfml
 ```
 
+### Verifica dell'installazione dei componenti aggiuntivi
+
+Per verificare la corretta installazione dei componenti aggiuntivi, eseguite i seguenti comandi:
+
+```zsh
+% cmake --version
+cmake version 3.27.6
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+```
+
+```zsh
+% brew list sfml
+/opt/homebrew/Cellar/sfml/2.6.0/include/SFML/ (109 files)
+/opt/homebrew/Cellar/sfml/2.6.0/lib/libsfml-audio.2.6.0.dylib
+/opt/homebrew/Cellar/sfml/2.6.0/lib/libsfml-graphics.2.6.0.dylib
+/opt/homebrew/Cellar/sfml/2.6.0/lib/libsfml-network.2.6.0.dylib
+/opt/homebrew/Cellar/sfml/2.6.0/lib/libsfml-system.2.6.0.dylib
+/opt/homebrew/Cellar/sfml/2.6.0/lib/libsfml-window.2.6.0.dylib
+...
+```
+
+e verificare che l'output, a meno di numeri di versione, sia consistente con quello riportato in questa guida.
+
 ## Aggiornamenti dei software installati
 
-È buona norma aggiornare periodicamente, indicativamente una volta alla settimana, tutti i pacchetti software
-installati.
+È buona norma **aggiornare periodicamente**, indicativamente **una volta alla settimana**, tutti i pacchetti
+software installati.
 
 Nel caso delle componenti installate tramite brew, l'aggiornamento si effettua
 [eseguendo i seguenti comandi](https://docs.brew.sh/FAQ#how-do-i-update-my-local-packages):
@@ -254,7 +287,7 @@ A questo punto, prova di nuovo ad eseguire il comando `code` da terminale:
 
 ### Metodi alternativi di compilazione del codice _C++_
 
-Come discusso in questa guida e ripetuto durante i laboratori, chi usa mac OS dovrebbe preferenzialmente utilizzare il comando `g++-12`
+Come discusso in questa guida e ripetuto durante i laboratori, chi usa mac OS dovrebbe preferenzialmente utilizzare il comando `g++-13`
 per la compilazione del codice sviluppato.
 
 In caso questo non funzioni, nel breve periodo (es.: durante un dato laboratorio), puoi tentare di compilare il codice sostituendo al comando `g++-12` la
