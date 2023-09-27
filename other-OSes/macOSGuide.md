@@ -25,13 +25,14 @@ e fa parte della famiglia Unix.
 ## Prerequisito: Xcode ed i Command Line Tools
 
 I _Command Line Tools (CLT) di Xcode_ sono necessari per procedere con l'installazione di tutti gli strumenti di lavoro.
+
 In aggiunta è necessario effettuare un'installazione completa di _Xcode_ per installare il framework di analisi _ROOT_ il
-quale, sebbene non necessario durante questo corso, verrà utilizzato in altri insegnamenti del corso di laurea in Fisica
+quale, sebbene non necessario durante questo corso, verrà utilizzato in altri insegnamenti.
 
 Se non lo hai già fatto, puoi installare _Xcode_ seguendo queste istruzioni:
 
 1. apri la pagina relativa ad [Xcode](https://apps.apple.com/us/app/xcode/id497799835) tramite il browser;
-2. una volta aperta, utilizza il programma _Mac App Store_ per procedere con l'installazione;
+2. una volta aperta, segui le indicazioni e utilizza il programma _Mac App Store_ per procedere con l'installazione;
 3. si avvierà una finestra di dialogo che ti permetterà di completare il processo.
 
 A seconda delle risorse (ad es. connessione) disponibili, il processo può richiedere abbastanza tempo (alcune decine di
@@ -58,7 +59,7 @@ eseguendo il seguente comando:
 % /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-> :warning: **Nota alla riga di comando**
+> :exclamation: **Nota alla riga di comando**
 >
 > Quando indicato nel testo, potrebbe essere necessario inserire un comando da un'applicazione detta _Terminale_.
 >
