@@ -7,6 +7,34 @@
   - [Verifica dell'installazione](#verifica-dellinstallazione)
   - [Risoluzione di problemi](#risoluzione-di-problemi)
 
+## Aggiornare WSL
+
+Da Powershell con permessi da amministratore ed eseguire il seguente comando:
+
+```powershell
+> wsl --update
+```
+
+## Verificare il funzionamento di WSLg
+
+Per verificare se la versione di WSL installata supporta l'interfaccia grafica installare da bash le applicazioni di esempio con il comando:
+
+```bash
+$ sudo apt install x11-apps
+```
+
+e provare ad aprire una finestra grafica che visualizza l'ora corrente con il comando:
+
+```bash
+$ xclock
+```
+
+Se si apre una finestra come la seguente, l'installazione ha avuto successo e non è necessario seguire il resto della guida.
+
+![XClock](images/xclock.jpg)
+
+## Installare un XServer
+
 > **Verificare la versione di WSL attiva**
 >
 > La guida varia in base alla versione di WSL installata, assicurarsi di seguire le istruzioni specifiche per la propria versione.
