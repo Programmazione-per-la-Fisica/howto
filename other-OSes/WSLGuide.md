@@ -58,7 +58,7 @@ Sistema -> Informazioni, verificando la corrispondenza del numero **Build sistem
 
 Se il proprio sistema operativo è aggiornato a Windows 11 (a partire dalla versione Preview 20262 fino alle versioni stable più recenti), è possibile utilizzare il comando semplificato di installazione.
 
-Per farlo è necessario aprire una finstera di comando come amministratore (powershell o cmd) e lanciare il comando.
+Per farlo è necessario aprire Powershell come Amministratore e lanciare il comando.
 
 ```cmd
 > wsl.exe --install
