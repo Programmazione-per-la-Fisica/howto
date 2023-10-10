@@ -5,7 +5,7 @@
 - [Strumenti software necessari](#strumenti-software-necessari)
 - [Altre piattaforme](#altre-piattaforme)
 - [Editor](#editor)
-- [Introduzione a Linux e all'uso della shell](#introduzione-a-linux-e-alluso-della-shell)
+- [Introduzione a Linux e all'uso della command line](#introduzione-a-linux-e-alluso-della-command-line)
 - [Appendice: ROOT](#appendice-root)
 
 Questa repository contiene la documentazione necessaria per configurare
@@ -73,23 +73,33 @@ Per uniformità tra tutte le piattaforme, l'editor consigliato è _[Visual Studi
 Code](https://code.visualstudio.com/)_. Si rimanda alla pagina indicata per
 l'installazione.
 
-## Introduzione a Linux e all'uso della shell
+## Introduzione a Linux e all'uso della command line
 
 Per prendere familiarità con Linux si suggeriscono le seguenti guide:
 
+- [Linux tutorial](https://ryanstutorials.net/linuxtutorial/) è una guida
+  esauriente a Linux e alla Bash scritta da Ryan Chadwick, ed è utilizzata
+  durante il secondo laboratorio introduttivo.
+  I primi 5 capitoli: "The Command Line", "Basic Navigation",
+  "More About Files", Manual Pages" e "File Manipulation" contengono
+  informazioni essenziali; gli altri possono essere approfonditi con calma;
+  alcuni ("Vi Text Editor", "Scripting") possono essere considerati superflui
+  per questo corso (ma sono comunque utili).
 - [Introduzione a
   Linux](https://www.sci.unich.it/~amato/teaching/old/labdati10/lezioni/linux/linux.php)
   è una sintetica introduzione a Linux e alla shell, scritta dal prof. Gianluca
   Amato dell'Università di Chieti per un corso di "Laboratorio di Sistemi
   Operativi". Il testo è un po' datato e la pagina presenta qualche errore di
   formattazione, ma il contenuto è ancora valido.
-- [Linux tutorial](https://ryanstutorials.net/linuxtutorial/) è una guida
-  esauriente a Linux e alla Bash scritta da Ryan Chadwick. I capitoli "The
-  Command Line", "Basic Navigation", "File Manipulation" contengono informazioni
-  essenziali; gli altri possono essere approfonditi con calma; alcuni ("Vi Text
-  Editor", "Scripting") possono essere considerati superflui per questo corso
-  (ma comunque utili).
 
+Inoltre possono risultare utili le seguenti pagine web:
+
+- [https://tldr.inbrowser.app/](https://tldr.inbrowser.app/) è una fonte di
+  documentazione meno dettagliata, ma di più rapida consultazione, rispetto alle
+  pagine del manuale.
+- [https://explainshell.com/](https://explainshell.com/) permette (molto spesso)
+  di analizzare in dettaglio comandi complessi.
+  
 ## Appendice: ROOT
 
 Oltre agli strumenti necessari per il corso, sono fornite
