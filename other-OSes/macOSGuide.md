@@ -13,6 +13,7 @@
   - [Aggiornamenti dei software installati](#aggiornamenti-dei-software-installati)
   - [Risoluzione dei problemi](#risoluzione-dei-problemi)
     - [Non è possibile lanciare VSCode da terminale](#non-è-possibile-lanciare-vscode-da-terminale)
+    - [Problemi di linking durante la compilazione con gcc](#problemi-di-linking-durante-la-compilazione-con-gcc)
     - [Metodi alternativi di compilazione del codice _C++_](#metodi-alternativi-di-compilazione-del-codice-c)
     - [Non è possibile utilizzare i comandi installati tramite Homebrew](#non-è-possibile-utilizzare-i-comandi-installati-tramite-homebrew)
 
@@ -285,15 +286,47 @@ A questo punto, prova di nuovo ad eseguire il comando `code` da terminale:
 % code
 ```
 
+### Problemi di linking durante la compilazione con gcc
+
+Qualora, durante la compilazione con `g++-13`, riscontrassi errori di _linking_ simili a:
+
+```zsh
+% g++-13 -Wall -Wextra hello.cpp -o hello 
+ld: warning: ignoring duplicate libraries: '-lgcc'
+0  0x102597648  __assert_rtn + 72
+1  0x1024cbfac  ld::AtomPlacement::findAtom(unsigned char, unsigned long long, ld::AtomPlacement::AtomLoc const*&, long long&) const + 1204
+2  0x1024e1924  ld::InputFiles::SliceParser::parseObjectFile(mach_o::Header const*) const + 15164
+3  0x1024eee30  ld::InputFiles::parseAllFiles(void (ld::AtomFile const*) block_pointer)::$_7::operator()(unsigned long, ld::FileInfo const&) const + 420
+4  0x1ab410440  _dispatch_client_callout2 + 20
+5  0x1ab423f1c  _dispatch_apply_invoke + 224
+6  0x1ab410400  _dispatch_client_callout + 20
+7  0x1ab421fb8  _dispatch_root_queue_drain + 684
+8  0x1ab4226c0  _dispatch_worker_thread2 + 164
+9  0x1ab5bc038  _pthread_wqthread + 228
+ld: Assertion failed: (resultIndex < sectData.atoms.size()), function findAtom, file Relocations.cpp, line 1336.
+collect2: error: ld returned 1 exit status
+```
+
+> :warning: Gli errori potrebbero essere diversi ma, si dovrebbero riferire alla fase di linking, ovvero iniziare con `ld: ...`.
+
+Puoi tentare di compilare il codice aggiungendo al comando `g++-13` la seguente opzione `-Wl,-ld_classic`, lasciando tutte le altre opzioni e 
+gli argomenti che avresti utilizzato per la compilazione invariati, ad esempio:
+
+```zsh
+% g++-13 -Wl,-ld_classic -Wall -Wextra hello.cpp -o hello 
+```
+
+Qualora questo suggerimento non dovesse risolvere il problema, prova la soluzione proposta [qui](#metodi-alternativi-di-compilazione-del-codice-c).
+
 ### Metodi alternativi di compilazione del codice _C++_
 
 Come discusso in questa guida e ripetuto durante i laboratori, chi usa mac OS dovrebbe preferenzialmente utilizzare il comando `g++-13`
 per la compilazione del codice sviluppato.
 
-In caso questo non funzioni, nel breve periodo (es.: durante un dato laboratorio), puoi tentare di compilare il codice sostituendo al comando `g++-12` la
+In caso questo non funzioni, nel breve periodo (es.: durante un dato laboratorio), puoi tentare di compilare il codice sostituendo al comando `g++-13` la
 seguente coppia di comando ed opzione `g++ -std=c++17`, lasciando tutte le altre opzioni e gli argomenti che avresti utilizzato per la compilazione invariati.
 
-In ogni caso, nel medio termine (es.: nei giorni successivi al laboratorio), il problema con `g++-12` va risolto.
+In ogni caso, nel medio termine (es.: nei giorni successivi al laboratorio), il problema con `g++-13` va risolto.
 Riferisciti alle istruzioni [qui sotto](#non-è-possibile-utilizzare-i-comandi-installati-tramite-homebrew) e sentiti libero di contattare
 [i docenti](https://virtuale.unibo.it/mod/page/view.php?id=1045205)
 
