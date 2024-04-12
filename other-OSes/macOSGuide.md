@@ -309,7 +309,7 @@ collect2: error: ld returned 1 exit status
 
 > :warning: Gli errori potrebbero essere diversi ma, si dovrebbero riferire alla fase di linking, ovvero iniziare con `ld: ...`.
 
-Puoi tentare di compilare il codice aggiungendo al comando `g++-13` la seguente opzione `-Wl,-ld_classic`, lasciando tutte le altre opzioni e 
+Puoi tentare di compilare il codice aggiungendo al comando `g++-13` la seguente opzione `-Wl,-ld_classic`, lasciando tutte le altre opzioni e
 gli argomenti che avresti utilizzato per la compilazione invariati, ad esempio:
 
 ```zsh
@@ -386,3 +386,27 @@ In caso caso ci siano aggiornamenti da effettuare (nel caso mostrato sopra non c
 
 > :warning: Come riportato sopra, qualora vengano proposti da `softwareupdate` evita aggiornamenti della release del sistema operativo (ad es.
 > il passaggio da _macOS Big Sur_ a _macOS Monterey_).
+
+**Reinstallare `brew` ed i pacchetti installati tramite il package manager**
+
+In rari casi, i processi di aggiornamento del sistema operativo o di Xcode,
+possono portare i pacchetti installati tramite _Homebrew_ in uno stato
+inconsistente, che il comando `brew doctor` non riesce a riconoscere.
+
+Questo potrebbe portarti in condizioni tali da non riuscire a compilare o usare
+correttamente librerie come _SFML_ o programmi come _ROOT_.
+
+Pertanto, potresti voler tentare una reinstallazione di _Homebrew_ e tutti
+i pacchetti tramite esso installati.
+
+La lista dei comandi è documentata in seguito, ma, in particolar modo in questo
+caso, ti **consigliamo vivamente** di **contattare
+[i docenti](https://virtuale.unibo.it/mod/page/view.php?id=1045205)** prima di
+procedere:
+
+```zsh
+% brew bundle dump
+% /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
+% /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+% brew bundle install
+```
