@@ -50,14 +50,14 @@ Per l'installazione dei prodotti software necessari per il corso useremo princip
 Per l'uso di brew sono richiesti alcuni prerequisiti:
 
 - Un _Mac_ con processore 64-bit Intel o Apple Silicon
-- macOS Monterey (12) o superiore
+- macOS Ventura (13) o superiore
 - i CLT di Xcode (o Xcode), la cui installazione è stata [appenda discussa](#prerequisito-xcode-ed-i-command-line-tools)
 
 Installa brew, aprendo l'applicazione Terminale (o Terminal) che si trova in Applicazioni &rarr; Utility (o Applications &rarr; Utility) ed
 eseguendo il seguente comando:
 
 ```zsh
-% /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+% /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 > :exclamation: **Nota alla riga di comando**
