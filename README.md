@@ -23,7 +23,7 @@ git clone https://github.com/Programmazione-per-la-Fisica/howto.git
 ## Piattaforma di riferimento
 
 La piattaforma di riferimento del corso è la distribuzione
-**Linux Ubuntu 22.04**.
+**Linux Ubuntu 24.04**.
 
 ## Strumenti software necessari
 
@@ -63,7 +63,7 @@ Prodotti software analoghi sono disponibili su altre piattaforme di uso comune,
 quali Windows e macOS:
 
 - **Windows**: si suggerisce di installare il _Windows Subsystem for Linux_,
-  seguendo [questa guida](other-OSes/WSLGuide.md);
+  seguendo [questa guida](other-OSes/windowsGuide.md);
 - **macOS**: essendo simile a Linux, la configurazione è semplificata ed è
   illustrata in [questa guida](other-OSes/macOSGuide.md).
 
@@ -103,6 +103,6 @@ Inoltre possono risultare utili le seguenti pagine web:
 ## Appendice: ROOT
 
 Oltre agli strumenti necessari per il corso, sono fornite
-[delle guide](ROOT-installation) per l'installazione del [framework di analisi
+[delle guide](other-OSes/rootGuide.md) per l'installazione del [framework di analisi
 _ROOT_](https://root.cern/), che verrà utilizzato in altri insegnamenti del
 corso di laurea in Fisica.
