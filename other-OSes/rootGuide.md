@@ -12,14 +12,14 @@ pacchetto di analisi.
 Per farlo, devi però installare in anticipo alcune _dipendenze_ necessarie per il funzionamento del programma:
 
 ```bash
-$ sudo apt-get install binutils cmake dpkg-dev g++ gcc libssl-dev \
+$ sudo apt install binutils cmake dpkg-dev g++ gcc libssl-dev \
 libx11-dev libxext-dev libxft-dev libxpm-dev python3 libtbb-dev libvdt-dev libgif-dev
 ```
 
 Così come alcuni pacchetti, non strettamente necessari, ma fortemente consigliati:
 
 ```bash
-$ sudo apt-get install gfortran libpcre3-dev \
+$ sudo apt install gfortran libpcre3-dev \
 libglu1-mesa-dev libglew-dev libftgl-dev \
 libfftw3-dev libcfitsio-dev libgraphviz-dev \
 libavahi-compat-libdnssd-dev libldap2-dev \
@@ -31,7 +31,7 @@ libgsl-dev qtwebengine5-dev nlohmann-json3-dev libmysqlclient-dev
 > La lista delle dipendenze potrebbe cambiare nel tempo, seguendo l'evoluzione di ROOT e della distribuzione Ubuntu.
 >
 > In caso i comandi presentati non risultino corretti, consulta
-> [quesdta pagina](https://root.cern/install/dependencies/).
+> [questa pagina](https://root.cern/install/dependencies/).
 
 A questo punto, scarica i binari precompilati di ROOT al presente [link](https://root.cern/install/all_releases/).
 
