@@ -1,4 +1,4 @@
-# Installazione di un XSever
+# Installazione di un XServer
 
 - [Installazione di un XSever](#installazione-di-un-xsever)
   - [VcXsrv](#vcxsrv)
