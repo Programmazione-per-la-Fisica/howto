@@ -86,7 +86,7 @@ ed aggiungi, alla fine del file, questa riga:
 source $HOME/root/bin/thisroot.sh
 ```
 
-ricodati poi di effettuare il salvataggio delle modifiche (`CTRL` + `S`).
+ricordati poi di effettuare il salvataggio delle modifiche (`CTRL` + `S`).
 
 > [!TIP]
 > Per verificare la corretta installazione di ROOT:
