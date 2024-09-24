@@ -89,7 +89,7 @@ nano .bashrc
 go at the end of the file and add this line:
 
 ```shell
-source root/bin/thisroot.sh
+source $HOME/root/bin/thisroot.sh
 ```
 
 > :warning: If you arein the `$HOME` directory you are ok, but if you planned to install ROOT in a different directory from `$HOME` you have to replace the above command with `source path/to/folder/root/bin/thisroot.sh` where `path/to/folder/` is the path to the folder in which you unzipped ROOT previously.
