@@ -107,8 +107,6 @@ Installa brew, aprendo l'applicazione Terminale (o Terminal) che si trova in App
 >
 > Le istruzioni esatte **sono riportate, sul Terminale, nelle ultime righe dell'output del comando installazione**.
 
-</details>
-
 ## Installazione degli strumenti di base
 
 Una volta terminata l'installazione di brew, puoi installare gli strumenti software necessari per il corso.
@@ -123,6 +121,9 @@ https://gcc.gnu.org/
 ...
 ```
 
+e **prendi nota** del primo numero, tra i tre separati da punti nella prima riga di output (in questo caso 14:
+`==> gcc: stable 14.2.0 (bottled), HEAD`)
+  
 Poi, installa i seguenti pacchetti:
 
 ```zsh
@@ -137,11 +138,12 @@ Questo comando, nell'ordine, installa:
   verifica la buona formattazione del codice
 
 > [!WARNING]
-> Il comando che gli utenti macOS utilizzeranno per la compilazione del codice C++ è `g++-14` (tutto attaccato), non
-> `g++`, come verrà di solito indicato durante il corso. Per questo motivo, poco sopra, abbiamo verificato la versione
-> di `gcc`.
+> Il comando che gli utenti macOS utilizzeranno per la compilazione del codice C++ **contiene il numero che ti abbiamo
+> chiesto di annotare poco fa**: nel caso della presente guida il comando è `g++-14` (tutto attaccato), non  `g++`,
+> come verrà di solito indicato durante il corso.
 >
-> Il comando `g++` è probabilmente disponibile, ma è un _alias_ per un altro compilatore.
+> Il comando `g++` è probabilmente disponibile, ma è un _alias_ per un altro compilatore (se vuoi puoi leggere
+> [questa parte della guida](#metodi-alternativi-di-compilazione-del-codice-c) per una descrizione dettagliata).
 
 > [!TIP]
 >
@@ -224,8 +226,6 @@ Nel caso di macOS, è possibile installare anche queste componenti aggiuntive tr
 > ```
 >
 > e verificare che l'output, a meno di numeri di versione, sia consistente con quello riportato in questa guida.
-
-</details>
 
 ## Aggiornamento dei software installati
 
