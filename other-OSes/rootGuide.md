@@ -6,7 +6,7 @@
 
 ## Installazione su Ubuntu (o Windows con WSL)
 
-La strategia suggerita è quella di installare una versione precompilata di ROOT, fornita dagli sviluppatori del
+La strategia suggerita è quella di **installare una versione precompilata** di ROOT, fornita dagli sviluppatori del
 pacchetto di analisi.
 
 Per farlo, devi però installare in anticipo alcune _dipendenze_ necessarie per il funzionamento del programma:
@@ -23,7 +23,7 @@ $ sudo apt install gfortran libpcre3-dev \
 libglu1-mesa-dev libglew-dev libftgl-dev \
 libfftw3-dev libcfitsio-dev libgraphviz-dev \
 libavahi-compat-libdnssd-dev libldap2-dev \
- python3-dev python3-numpy libxml2-dev libkrb5-dev \
+python3-dev python3-numpy libxml2-dev libkrb5-dev \
 libgsl-dev qtwebengine5-dev nlohmann-json3-dev libmysqlclient-dev
 ```
 
@@ -35,17 +35,17 @@ libgsl-dev qtwebengine5-dev nlohmann-json3-dev libmysqlclient-dev
 
 A questo punto, scarica i binari precompilati di ROOT al presente [link](https://root.cern/install/all_releases/).
 
-Cliccando sulla **latest stable** vedrai che esistono diverse versioni di pacchetti precompilati corrispondenti a 
+Cliccando sulla **latest stable** vedrai che esistono diverse versioni di pacchetti precompilati corrispondenti a
 diversi sistemi operativi.
 
 > [!IMPORTANT]
-> Puoi verificare, da Ubuntu, la versione del sistema operativo installato tramite il comando
+> Verifica, da Ubuntu, la versione del sistema operativo installato tramite il comando
 >
 > ```bash
 > $ lsb_release -a
 > ```
 
-Per iniziare il download di ROOT copia quindi il link in blu corrispondente al tuo sistema operativo (es:
+Per iniziare il download di ROOT copia quindi _il link_in blu corrispondente al tuo sistema operativo (es:
 `https://root.cern/download/root_v6.32.04.Linux-ubuntu24.04-x86_64-gcc13.2.tar.gz`) ed esegui i comandi:
 
 ```bash

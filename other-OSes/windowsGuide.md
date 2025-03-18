@@ -311,7 +311,7 @@ indicando root come nome utente, vuol dire che l'utente di default non è stato 
 Per risolvere, aprire Powershell come amministratore e eseguire il comando:
 
 ```powershell
-> ubuntu.exe config --default-user <USERNAME>
+> ubuntu2024.exe config --default-user <USERNAME>
 ```
 
 > [!NOTE]
