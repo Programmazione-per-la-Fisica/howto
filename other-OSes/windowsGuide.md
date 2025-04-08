@@ -12,6 +12,7 @@
   - [Verificare il funzionamento dell'interfaccia grafica](#verificare-il-funzionamento-dellinterfaccia-grafica)
 - [Risoluzione dei problemi](#risoluzione-dei-problemi)
   - [Fallimento nella creazione dello user su Ubuntu](#fallimento-nella-creazione-dello-user-su-ubuntu)
+  - [Reset della password in Ubuntu](#reset-della-password-in-ubuntu)
   - [sudo apt update fallisce "Temporary failure resolving 'archive.ubuntu.com'"](#sudo-apt-update-fallisce-temporary-failure-resolving-archiveubuntucom)
   - [Impossibile avviare la macchina virtuale perché una funzionalità richiesta non è installata](#impossibile-avviare-la-macchina-virtuale-perché-una-funzionalità-richiesta-non-è-installata)
   - [Impossibile avviare VSCode su WSL con il comando `code`](#impossibile-avviare-vscode-su-wsl-con-il-comando-code)
@@ -322,6 +323,30 @@ Per risolvere, aprire Powershell come amministratore e eseguire il comando:
 > Il nome utente  DEVE essere quello indicato in fase di installazione. Nel caso in cui non ci si ricordasse il nome
 > utente, è possibile leggere l'elenco degli utenti con: `cat /etc/passwd`. Il proprio utente sarà tra gli ultimi
 > presenti nella lista.
+
+## Reset della password in Ubuntu
+
+Per resettare la propria password su Ubuntu, qualora venga dimenticata, aprire Powershell come amministratore ed
+eseguire il comando:
+
+```powershell
+> wsl -u root
+```
+
+che dovrebbe permettervi di accedere a Ubuntu come utente `root`.
+
+A questo punto digitare il comando indicato sotto e digitare (due volte), la nuova password che si intende utilizzare
+per il proprio utente:
+
+```bash
+root@LAPTOP:~$ passwd <USERNAME>
+New password: 
+Retype new password: 
+```
+
+> [!NOTE]
+> Durante la digitazione della password non noterete alcuno spostamento del cursore.
+> La cosa è perfettamente normale.
 
 ## sudo apt update fallisce "Temporary failure resolving 'archive.ubuntu.com'"
 
