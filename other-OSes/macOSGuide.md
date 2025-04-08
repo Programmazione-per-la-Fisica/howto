@@ -203,7 +203,7 @@ Più avanti nel corso, faremo uso di strumenti aggiuntivi, quali:
 Nel caso di macOS, è possibile installare anche queste componenti aggiuntive tramite `brew`:
 
 ```zsh
-% brew install cmake sfml
+% brew install cmake sfml ninja
 ```
 
 > [!TIP]
@@ -223,6 +223,11 @@ Nel caso di macOS, è possibile installare anche queste componenti aggiuntive tr
 > /opt/homebrew/Cellar/sfml/2.6.1/lib/libsfml-graphics.2.6.1.dylib
 > /opt/homebrew/Cellar/sfml/2.6.1/lib/libsfml-network.2.6.1.dylib
 > ...
+> ```
+>
+> ```zsh
+> % ninja --version
+> 1.12.1
 > ```
 >
 > e verificare che l'output, a meno di numeri di versione, sia consistente con quello riportato in questa guida.

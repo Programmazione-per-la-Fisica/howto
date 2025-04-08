@@ -47,7 +47,7 @@ Durante il corso verranno usati ulteriori strumenti: [`CMake`](https://cmake.org
 [SFML](https://sfml-dev.org/) per la creazione di semplici interfacce grafiche. L'installazione è altrettanto semplice:
 
 ```shell
-sudo apt install cmake libsfml-dev
+sudo apt install cmake ninja-build libsfml-dev
 ```
 
 ## Altre piattaforme
