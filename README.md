@@ -9,8 +9,8 @@
 - [Appendice: ROOT](#appendice-root)
 
 Questa repository contiene la documentazione necessaria per configurare l'ambiente di lavoro per l'insegnamento di
-_[Programmazione per la Fisica](https://github.com/Programmazione-per-la-Fisica/pf2023)_,
-corso di laurea in Fisica, Università di Bologna, Anno Accademico 2023/2024.
+_[Programmazione per la Fisica](https://github.com/Programmazione-per-la-Fisica/pf2025)_,
+corso di laurea in Fisica, Università di Bologna, Anno Accademico 2025/2026.
 
 Il contenuto della repository è scaricabile sul proprio computer usando il comando `git`:
 
@@ -54,10 +54,13 @@ sudo apt install cmake ninja-build libsfml-dev
 
 Prodotti software analoghi sono disponibili su altre piattaforme di uso comune, quali Windows e macOS:
 
-- **Windows**: si suggerisce di installare il _Windows Subsystem for Linux_, seguendo
+- **Windows**: si suggerisce di installare il _Windows Subsystem for Linux_ (WSL) seguendo
   [questa guida](other-OSes/windowsGuide.md);
 - **macOS**: essendo simile a Linux, la configurazione è semplificata ed è illustrata in
   [questa guida](other-OSes/macOSGuide.md).
+
+Nel caso di Windows è poi necessario procedere poi con l'installazione [descritta sopra](#strumenti-software-necessari)
+dopo aver completato l'installazione di Ubuntu 24.04 in WSL.
 
 ## Editor
 
@@ -80,13 +83,13 @@ Per prendere familiarità con Linux si suggeriscono le seguenti guide:
 
 Inoltre possono risultare utili le seguenti pagine web:
 
-- [https://tldr.inbrowser.app/](https://tldr.inbrowser.app/) è una fonte di documentazione meno dettagliata, ma di più
+- [https://tldr.inbrowser.app](https://tldr.inbrowser.app/) è una fonte di documentazione meno dettagliata, ma di più
   rapida consultazione, rispetto alle pagine del manuale.
-- [https://explainshell.com/](https://explainshell.com/) permette (molto spesso) di analizzare in dettaglio comandi
+- [https://explainshell.com](https://explainshell.com/) permette (molto spesso) di analizzare in dettaglio comandi
   complessi.
   
 ## Appendice: ROOT
 
-Oltre agli strumenti necessari per il corso, sono fornite [delle guide](other-OSes/rootGuide.md) per l'installazione del
+Oltre agli strumenti necessari per il corso, è fornita [una guida](other-OSes/rootGuide.md) per l'installazione del
 [framework di analisi _ROOT_](https://root.cern/), che verrà utilizzato in altri insegnamenti del corso di laurea in
 Fisica.
