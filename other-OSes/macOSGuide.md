@@ -35,8 +35,9 @@ Se non lo hai già fatto, puoi installare _Xcode_ seguendo queste istruzioni:
 A seconda delle risorse (ad es. connessione) disponibili, il processo può richiedere abbastanza tempo (alcune decine di
 minuti o più).
 
-Se possibile, **raccomandiamo di effettuare questa parte dell'installazione già a casa**, prima di presentarti in
-laboratorio, dove saranno poi completati il resto dell'installazione e della configurazione.
+> [!IMPORTANT]
+> Se possibile, **raccomandiamo di effettuare questa parte dell'installazione già a casa**, prima di presentarti in
+> laboratorio, dove saranno poi completati il resto dell'installazione e della configurazione.
 
 ## Installazione di Homebrew
 
@@ -46,7 +47,7 @@ Per l'installazione dei prodotti software necessari per il corso useremo princip
 Per l'uso di brew sono richiesti alcuni prerequisiti:
 
 - Un _Mac_ con processore 64-bit Intel o Apple Silicon
-- macOS Ventura (13) o superiore
+- macOS Sonoma (14) o superiore
 - i CLT di Xcode (o Xcode), la cui installazione è stata [appenda discussa](#prerequisito-xcode-e-i-command-line-tools)
 
 Installa brew, aprendo l'applicazione Terminale (o Terminal) che si trova in Applicazioni &rarr; Utility (o Applications
@@ -59,7 +60,7 @@ Installa brew, aprendo l'applicazione Terminale (o Terminal) che si trova in App
 > [!IMPORTANT]
 > **Nota alla riga di comando**
 >
-> Quando indicato nel testo, potrebbe essere necessario inserire un comando da un'applicazione detta _Terminale_.
+> Quando indicato nel testo, potrebbe essere necessario inserire un comando nel _Terminale_.
 >
 > In questa guida, tali comandi sono preceduti da un simbolo, chiamato `prompt`, che può variare in base al terminale
 > utilizzato o al sistema operativo. Tipicamente su Windows il simbolo è `>`, su Linux `$` e su MacOs `%` (oppure `$`).
@@ -115,14 +116,14 @@ Innanzitutto, verifica la versione più recente disponibile del compilatore _gcc
 
 ```zsh
 % brew info gcc
-==> gcc: stable 14.2.0 (bottled), HEAD
+==> gcc: stable 15.1.0 (bottled), HEAD
 GNU compiler collection
 https://gcc.gnu.org/
 ...
 ```
 
-e **prendi nota** del primo numero, tra i tre separati da punti nella prima riga di output (in questo caso 14:
-`==> gcc: stable 14.2.0 (bottled), HEAD`)
+e **prendi nota** del primo numero, tra i tre separati da punti nella prima riga di output (in questo caso 15:
+`==> gcc: stable 15.1.0 (bottled), HEAD`)
   
 Poi, installa i seguenti pacchetti:
 
@@ -139,7 +140,7 @@ Questo comando, nell'ordine, installa:
 
 > [!WARNING]
 > Il comando che gli utenti macOS utilizzeranno per la compilazione del codice C++ **contiene il numero che ti abbiamo
-> chiesto di annotare poco fa**: nel caso della presente guida il comando è `g++-14` (tutto attaccato), non  `g++`,
+> chiesto di annotare poco fa**: nel caso della presente guida il comando è `g++-15` (tutto attaccato), non  `g++`,
 > come verrà di solito indicato durante il corso.
 >
 > Il comando `g++` è probabilmente disponibile, ma è un _alias_ per un altro compilatore (se vuoi puoi leggere
@@ -151,12 +152,12 @@ Questo comando, nell'ordine, installa:
 >
 > ```zsh
 > % git --version
-> git version 2.46.1
+> git version 2.51.0
 > ```
 >
 > ```zsh
-> % g++-14 --version
-> g++-14 (Homebrew GCC 14.2.0) 14.2.0
+> % g++-15 --version
+> g++-15 (Homebrew GCC 15.1.0) 15.1.0
 > Copyright (C) 2024 Free Software Foundation, Inc.
 > This is free software; see the source for copying conditions.  There is NO
 > warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
@@ -164,7 +165,7 @@ Questo comando, nell'ordine, installa:
 >
 > ```zsh
 > % clang-format --version
-> clang-format version 19.1.0
+> clang-format version 21.1.0
 > ```
 >
 > I numeri di versione riportati sopra sono solo indicativi, e possono variare nel tempo, **quello che è importante**
@@ -203,7 +204,7 @@ Più avanti nel corso, faremo uso di strumenti aggiuntivi, quali:
 Nel caso di macOS, è possibile installare anche queste componenti aggiuntive tramite `brew`:
 
 ```zsh
-% brew install cmake sfml ninja
+% brew install cmake sfml@2 ninja
 ```
 
 > [!TIP]
@@ -211,23 +212,23 @@ Nel caso di macOS, è possibile installare anche queste componenti aggiuntive tr
 >
 > ```zsh
 > % cmake --version
-> cmake version 3.30.3
+> cmake version 4.1.1
 >
 > CMake suite maintained and supported by Kitware (kitware.com/cmake).
 > ```
 >
 > ```zsh
-> % brew list sfml
-> /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/ (109 files)
-> /opt/homebrew/Cellar/sfml/2.6.1/lib/libsfml-audio.2.6.1.dylib
-> /opt/homebrew/Cellar/sfml/2.6.1/lib/libsfml-graphics.2.6.1.dylib
-> /opt/homebrew/Cellar/sfml/2.6.1/lib/libsfml-network.2.6.1.dylib
+> % brew list sfml@2
+> /opt/homebrew/Cellar/sfml@2/2.6.2_1/include/SFML/ (109 files)
+> /opt/homebrew/Cellar/sfml@2/2.6.2_1/lib/libsfml-audio.2.6.2.dylib
+> /opt/homebrew/Cellar/sfml@2/2.6.2_1/lib/libsfml-graphics.2.6.2.dylib 
+> /opt/homebrew/Cellar/sfml@2/2.6.2_1/lib/libsfml-network.2.6.2.dylib
 > ...
 > ```
 >
 > ```zsh
 > % ninja --version
-> 1.12.1
+> 1.13.1
 > ```
 >
 > e verificare che l'output, a meno di numeri di versione, sia consistente con quello riportato in questa guida.
@@ -257,7 +258,7 @@ comando:
 
 > [!WARNING]
 > La situazione è ben diversa quando si parla di update della release del sistema operativo (ad es. il passaggio da
-> _macOS Big Sur_ a _macOS Monterey_).
+> _macOS Ventura_ a _macOS Sonoma_).
 > **Prima di procedere ad un cambiamento tanto radicale** è buona norma
 > **assicurarsi in anticipo che i programmi che utilizziamo**
 > normalmente **siano compatibili con la nuova versione del sistema operativo**.
@@ -296,10 +297,10 @@ A questo punto, prova di nuovo ad eseguire il comando `code` da terminale:
 
 ## Problemi di linking durante la compilazione con gcc
 
-Qualora, durante la compilazione con `g++-14`, riscontrassi errori di _linking_ simili a:
+Qualora, durante la compilazione con `g++-15`, riscontrassi errori di _linking_ simili a:
 
 ```zsh
-% g++-14 -Wall -Wextra hello.cpp -o hello 
+% g++-15 -Wall -Wextra hello.cpp -o hello 
 ld: warning: ignoring duplicate libraries: '-lgcc'
 0  0x102597648  __assert_rtn + 72
 1  0x1024cbfac  ld::AtomPlacement::findAtom(unsigned char, unsigned long long, ld::AtomPlacement::AtomLoc const*&, long long&) const + 1204
@@ -318,11 +319,11 @@ collect2: error: ld returned 1 exit status
 > [!NOTE]
 > Gli errori potrebbero essere diversi ma, si dovrebbero riferire alla fase di linking, ovvero iniziare con `ld: ...`.
 
-Puoi tentare di compilare il codice aggiungendo al comando `g++-14` la seguente opzione `-Wl,-ld_classic`, lasciando
+Puoi tentare di compilare il codice aggiungendo al comando `g++-15` la seguente opzione `-Wl,-ld_classic`, lasciando
 tutte le altre opzioni e gli argomenti che avresti utilizzato per la compilazione invariati, ad esempio:
 
 ```zsh
-% g++-14 -Wl,-ld_classic -Wall -Wextra hello.cpp -o hello 
+% g++-15 -Wl,-ld_classic -Wall -Wextra hello.cpp -o hello 
 ```
 
 Qualora questo suggerimento non dovesse risolvere il problema, prova la soluzione proposta [qui](#metodi-alternativi-di-compilazione-del-codice-c).
@@ -330,13 +331,13 @@ Qualora questo suggerimento non dovesse risolvere il problema, prova la soluzion
 ## Metodi alternativi di compilazione del codice _C++_
 
 Come discusso in questa guida e ripetuto durante i laboratori, chi usa mac OS dovrebbe preferenzialmente utilizzare il
-comando `g++-14` per la compilazione del codice sviluppato.
+comando `g++-15` per la compilazione del codice sviluppato.
 
 In caso questo non funzioni, nel breve periodo (es.: durante un dato laboratorio), puoi tentare di compilare il codice
-sostituendo al comando `g++-14` la seguente coppia di comando e opzione `g++ -std=c++17`, lasciando tutte le altre
+sostituendo al comando `g++-15` la seguente coppia di comando e opzione `g++ -std=c++17`, lasciando tutte le altre
 opzioni e gli argomenti che avresti utilizzato per la compilazione invariati.
 
-In ogni caso, nel medio termine (es.: nei giorni successivi al laboratorio), il problema con `g++-14` va risolto.
+In ogni caso, nel medio termine (es.: nei giorni successivi al laboratorio), il problema con `g++-15` va risolto.
 Riferisciti alle istruzioni [qui sotto](#non-è-possibile-utilizzare-i-comandi-installati-tramite-homebrew) e sentiti
 libero di contattare [i docenti](https://virtuale.unibo.it/mod/page/view.php?id=1045205)
 
@@ -415,8 +416,7 @@ i pacchetti tramite esso installati.
 
 La lista dei comandi è documentata in seguito, ma, in particolar modo in questo
 caso, ti **consigliamo vivamente** di **contattare
-[i docenti](https://virtuale.unibo.it/mod/page/view.php?id=1045205)** prima di
-procedere:
+[i docenti](https://github.com/Programmazione-per-la-Fisica#anno-accademico-202526)** prima di procedere:
 
 ```zsh
 % brew bundle dump
