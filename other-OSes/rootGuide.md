@@ -12,8 +12,8 @@ pacchetto di analisi.
 Per farlo, devi però installare in anticipo alcune _dipendenze_ necessarie per il funzionamento del programma:
 
 ```bash
-$ sudo apt install binutils cmake dpkg-dev g++ gcc libssl-dev \
-libx11-dev libxext-dev libxft-dev libxpm-dev python3 libtbb-dev libvdt-dev libgif-dev
+$ sudo apt install binutils cmake dpkg-dev g++ gcc libssl-dev git libx11-dev \
+libxext-dev libxft-dev libxpm-dev python3 libtbb-dev libvdt-dev libgif-dev
 ```
 
 Così come alcuni pacchetti, non strettamente necessari, ma fortemente consigliati:
@@ -23,8 +23,10 @@ $ sudo apt install gfortran libpcre3-dev \
 libglu1-mesa-dev libglew-dev libftgl-dev \
 libfftw3-dev libcfitsio-dev libgraphviz-dev \
 libavahi-compat-libdnssd-dev libldap2-dev \
-python3-dev python3-numpy libxml2-dev libkrb5-dev \
-libgsl-dev qtwebengine5-dev nlohmann-json3-dev libmysqlclient-dev
+ python3-dev python3-numpy libxml2-dev libkrb5-dev \
+libgsl-dev qtwebengine5-dev nlohmann-json3-dev libmysqlclient-dev \
+libgl2ps-dev \
+liblzma-dev libxxhash-dev liblz4-dev libzstd-dev
 ```
 
 > [!WARNING]
@@ -46,20 +48,20 @@ diversi sistemi operativi.
 > ```
 
 Per iniziare il download di ROOT copia quindi _il link_in blu corrispondente al tuo sistema operativo (es:
-`https://root.cern/download/root_v6.32.04.Linux-ubuntu24.04-x86_64-gcc13.2.tar.gz`) ed esegui i comandi:
+`https://root.cern/download/root_v6.36.04.Linux-ubuntu24.04-x86_64-gcc13.3.tar.gz`) ed esegui i comandi:
 
 ```bash
 $ cd
-$ wget https://root.cern/download/root_v6.32.04.Linux-ubuntu24.04-x86_64-gcc13.2.tar.gz
+$ wget https://root.cern/download/root_v6.36.04.Linux-ubuntu24.04-x86_64-gcc13.3.tar.gz
 
---2024-09-18 21:42:05--  https://root.cern/download/root_v6.32.04.Linux-ubuntu24.04-x86_64-gcc13.2.tar.gz
+--2024-09-18 21:42:05--  https://root.cern/download/root_v6.36.04.Linux-ubuntu24.04-x86_64-gcc13.3.tar.gz
 ...
 ```
 
 Una volta completato il download, esegui l comando:
 
 ```bash
-tar -xzvf root_v6.32.04.Linux-ubuntu24.04-x86_64-gcc13.2.tar.gz
+tar -xzvf root_v6.36.04.Linux-ubuntu24.04-x86_64-gcc13.3.tar.gz
 ```
 
 > [!IMPORTANT]
@@ -97,13 +99,13 @@ ricordati poi di effettuare il salvataggio delle modifiche (`CTRL` + `S`).
 > ```bash
 > $ root
 >   ------------------------------------------------------------------
->   | Welcome to ROOT 6.30/08                        https://root.cern |
->   | (c) 1995-2024, The ROOT Team; conception: R. Brun, F. Rademakers |
->   | Built for linuxx8664gcc on Jul 23 2024, 00:00:03                 |
->   | From heads/master@tags/v6-30-08                                  |
->   | With c++ (GCC) 8.5.0 20210514 (Red Hat 8.5.0-22)                 |
->   | Try '.help'/'.?', '.demo', '.license', '.credits', '.quit'/'.q'  |
->    ------------------------------------------------------------------
+>  | Welcome to ROOT 6.36.04                        https://root.cern |
+>  | (c) 1995-2025, The ROOT Team; conception: R. Brun, F. Rademakers |
+>  | Built for linuxx8664gcc on Aug 25 2025, 00:00:00                 |
+>  | From tags/6-36-04@6-36-04                                        |
+>  | With g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-5)                |
+>  | Try '.help'/'.?', '.demo', '.license', '.credits', '.quit'/'.q'  |
+>   ------------------------------------------------------------------
 > 
 > root [0] 
 > ```
@@ -124,13 +126,13 @@ Una volta installato Homebrew, per installare ROOT, esegui il comando:
 > ```zsh
 > % root
 >   ------------------------------------------------------------------
->   | Welcome to ROOT 6.30/08                        https://root.cern |
->   | (c) 1995-2024, The ROOT Team; conception: R. Brun, F. Rademakers |
->   | Built for linuxx8664gcc on Jul 23 2024, 00:00:03                 |
->   | From heads/master@tags/v6-30-08                                  |
->   | With c++ (GCC) 8.5.0 20210514 (Red Hat 8.5.0-22)                 |
->   | Try '.help'/'.?', '.demo', '.license', '.credits', '.quit'/'.q'  |
->    ------------------------------------------------------------------
+>  | Welcome to ROOT 6.36.04                        https://root.cern |
+>  | (c) 1995-2025, The ROOT Team; conception: R. Brun, F. Rademakers |
+>  | Built for macosxarm64 on Aug 25 2025, 09:02:18                   |
+>  | From tags/6-36-04@6-36-04                                        |
+>  | With Apple clang version 17.0.0 (clang-1700.0.13.3)              |
+>  | Try '.help'/'.?', '.demo', '.license', '.credits', '.quit'/'.q'  |
+>   ------------------------------------------------------------------
 > 
 > root [0] 
 > ```
