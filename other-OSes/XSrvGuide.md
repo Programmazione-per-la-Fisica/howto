@@ -32,7 +32,7 @@ VcXsrv è un software open source per Windows basato su una delle [distribuzioni
 4. **Se si usa WSL2** assicurarsi di attivare l'opzione "Disable access control".
 5. Clicca su Next > per accettare le configurazioni e Finish per avviare il programma
 
-> Individuata la configurazione preferita è possibile salvarla su file dall'ultima scheramta di configurazione. Successivamente sarà possibile usare questo nuovo collegamento per avviare direttamente il server nella confiugurazione memorizzata.
+> Individuata la configurazione preferita è possibile salvarla su file dall'ultima schermata di configurazione. Successivamente sarà possibile usare questo nuovo collegamento per avviare direttamente il server nella configurazione memorizzata.
 
 ## MobaXterm
 
@@ -67,6 +67,7 @@ Lanciare i comandi seguenti da WSL:
 
 ```bash
 $ export DISPLAY="$(/sbin/ip route | awk '/default/ { print $3 }'):0"
+$ export LIBGL_ALWAYS_INDIRECT=1
 ```
 
 I cambiamenti effettuati rimarranno fino al successivo riavvio di WSL.
@@ -136,7 +137,7 @@ Se si apre una finestra come la seguente, l'installazione ha avuto successo.
 
 Se una volta lanciato il comando il terminale dovesse sospendersi (non si apre nessuna finestra, non ritorna nessun errore sulla linea di comando, non risulta attivo il prompt), potrebbe esserci un problema dovuto alle impostazioni del firewall di Windows.
 
-Molto probabilmente, la rete a cui si è connessi risulta memorizzata come rete Pubblica. Nel caso in cui questo fosse errato (si sta cioè usando una connessione domestica o la connessione sicura universtaria), è possibile cambiare il profilo di rete andando in Impostazioni > Rete e Internet > Proprietà e selezionare il profilo Privato per la rete attiva.
+Molto probabilmente, la rete a cui si è connessi risulta memorizzata come rete Pubblica. Nel caso in cui questo fosse errato (si sta cioè usando una connessione domestica o la connessione sicura universitaria), è possibile cambiare il profilo di rete andando in Impostazioni > Rete e Internet > Proprietà e selezionare il profilo Privato per la rete attiva.
 
 In alternativa, è possibile cambiare le impostazioni del firewall abilitando il Server X.
 Se si utilizza il firewall standard di Windows, Windows Security, è possibile cercare Firewall & Network security nelle Impostazioni e cliccare sul link Allow an app through firewall. Nella finestra che appare, individuare la voce VcXsrv o MobaXterm e abilitare l'applicazione su entrambe i profili di rete.
