@@ -2,7 +2,7 @@
 
 - [Configurazione dell'ambiente di lavoro su Windows](#configurazione-dellambiente-di-lavoro-su-windows)
   - [Prerequisiti: verifica della Build di Windows e download di Ubuntu dal Microsoft Store](#prerequisiti-verifica-della-build-di-windows-e-download-di-ubuntu-dal-microsoft-store)
-  - [Installazione di WSL 2 - Build 20262 o superiore](#installazione-di-wsl-2---build-20262-o-superiore)
+  - [Installazione di WSL 2 - Build 19041 o superiore](#installazione-di-wsl-2---build-19041-o-superiore)
   - [Installazione manuale WSL 2 - Build 18362 o superiori](#installazione-manuale-wsl-2---build-18362-o-superiori)
   - [Installazione manuale WSL 1 - Build da 16215 a 18360](#installazione-manuale-wsl-1---build-da-16215-a-18360)
   - [Configurare la distribuzione](#configurare-la-distribuzione)
@@ -62,16 +62,20 @@ Windows installata sulla macchina.
 Prima di proseguire, controlla quindi la versione di Windows navigando in Impostazioni -> Sistema -> Informazioni sul
 sistema, ed annota il numero relativo a **Build sistema operativo**.
 
-In caso la build di sistema risulti uguale o superiore a 20262, preparati per l'installazione scaricando
-[Ubuntu 24.04 LTS](https://apps.microsoft.com/detail/9nz3klhxdjp5) dal _Microsoft Store_.
-
 Se possibile, **ti raccomandiamo di effettuare questa parte dell'installazione già a casa**, prima di presentarti in
 laboratorio, dove saranno poi completati il resto dell'installazione e della configurazione.
 
-## Installazione di WSL 2 - Build 20262 o superiore
+## Installazione di WSL 2 - Build 19041 o superiore
 
-Se il proprio sistema operativo è aggiornato a Windows 11 (a partire dalla versione Preview 20262, fino alle versioni
+Se il proprio sistema operativo è aggiornato a Windows 11 (a partire dalla versione Preview 19041, fino alle versioni
 _stable_ più recenti), è possibile utilizzare il comando semplificato di installazione.
+
+> [!CAUTION]
+> Prima dell'installazione, assicurarsi che gli strumenti di Virtualizzazione di Windows
+> siano attivi. Per farlo è sufficiente cercare nella barra Start `features`, aprendo 
+> l'opzione `Attiva o disattiva funzionalità di Windows`. Da li assicurarsi che
+> `Piattaforma macchina virtuale` e `Piattaforma Windows Hypervisor` siano attive.
+> Se non lo fossero, attivarle e cliccare OK. Il computer si riavvierà al termine.
 
 Per farlo è necessario aprire Powershell come Amministratore e lanciare il comando.
 
@@ -80,7 +84,11 @@ Per farlo è necessario aprire Powershell come Amministratore e lanciare il coma
 ```
 
 Dopo un riavvio, WSL sarà pronta all'uso.
-Con questo comando verrà installata la versione di Ubuntu suggerita per il corso.
+
+> [!NOTE]
+>
+> È possibile che venga nuovamente aperta una finestra del terminale dopo il riavvio.
+> Lasciar terminare l'installazione fino al passaggio della creazione dell'account personale in Ubuntu.
 
 Una volta installato il Sottosistema Windows per Linux passare alla sezione
 [Configurare la distribuzione](#configurare-la-distribuzione) di questa guida.
@@ -144,11 +152,11 @@ Per installare WSL1 seguire i soli passaggi 1, 3 e 6 presentati nella sezione [p
 
 ## Configurare la distribuzione
 
-Avvia la distribuzione cercando Ubuntu nel menù di start; per gli avvii successivi potrai anche farlo lanciando i
-comandi `bash` o `wsl` da Powershell o dal Prompt dei Comandi.
+Avvia la distribuzione cercando Ubuntu nel menù di start (o WSL); per gli avvii successivi potrai anche farlo lanciando i comandi `bash` o `wsl` da Powershell o dal Prompt dei Comandi. 
 
-Al primo avvio si aprirà una finestra della console e ti verrà richiesto di attendere qualche minuto per la
-decompressione e l'archiviazione dei file nel PC.
+> [!CAUTION]
+> Come spiegato sopra, è possibile che dopo il riavvio dall'installazione di WSL, una finestra del terminale si apra 
+> automaticamente per consentire le ultime operazioni di installazione. Lasciar terminare e quindi proseguire nella guida.
 
 Ti verrà poi chiesto di **immettere un nome utente** e **una password**. Questi sono specifici della distribuzione di
 Ubuntu installata e non hanno alcuna relazione con nome utente e password di Windows.
@@ -165,6 +173,10 @@ Ubuntu installata e non hanno alcuna relazione con nome utente e password di Win
 > [!CAUTION]
 > Se dimentichi la password della distribuzione di Linux fai riferimento a
 > [questa guida](https://docs.microsoft.com/it-it/windows/wsl/user-support#forgot-your-password) per recuperarla.
+
+> [!TIP]
+> Se la dimensione del font del terminale risultasse essere troppo piccola, è possibile zoomare facendo CTRL+scroll
+> del mouse/trackpad.
 
 Aggiorna quindi il catalogo pacchetti della distribuzione. Per Ubuntu è possibile farlo eseguendo il seguente comando
 dal terminale:
@@ -209,8 +221,8 @@ $ sudo apt install git clang-format g++
 >
 > ```bash
 > $ g++ --version
-> g++ (Ubuntu 13.2.0-23ubuntu4) 13.2.0
-> Copyright (C) 2024 Free Software Foundation, Inc.
+> g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+> Copyright (C) 2023 Free Software Foundation, Inc.
 > This is free software; see the source for copying conditions.  There is NO
 > warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 > ```
@@ -238,13 +250,13 @@ Visual Studio Code (VS Code).
 > [!IMPORTANT]
 > Prima di iniziare, assicurati di aver completato l'installazione di WSL.
 
-In primis, **scarica e installa** [VS Code](https://code.visualstudio.com/) **su Windows**
+In primis, **scarica e installa** [VS Code](https://code.visualstudio.com/) **su Windows**.
+
+Durante l'installazione assicurati di selezionare l'opzione "Add to PATH" così da poter aprire VS Code con il comando
+`code` da terminale. Al termine riavvia il PC.
 
 > [!CAUTION]
 > **NON** installare VS Code nella distribuzione Linux in ambiente WSL.
-
-Durante l'installazione assicurati di selezionare l'opzione "Add to PATH" così da poter aprire VS Code con il comando
-`code` da terminale.
 
 A questo punto, installa l'estensione **Visual Studio Code Remote - WSL**, che permette di usare WSL come ambiente di
 sviluppo direttamente da VS Code.
@@ -262,8 +274,10 @@ Una volta configurato VS Code, sarà possibile aprire una cartella interna a WSL
 2. Esegui il comando `code .` da terminale.
 
 Dopo qualche istante si aprirà una nuova finestra di VS Code, ed eseguirà l'installazione e la configurazione
-automaticamente. Una volta completato apparirà un nuovo indicatore nell'angolo in basso a sinistra, indicando la
-riuscita dell'operazione.
+automaticamente. Una volta completato apparirà un nuovo indicatore nell'angolo in basso a sinistra, indicando la riuscita dell'operazione. 
+
+*Potrebbe apparire un messaggio di conferma di affidabilità della cartella da cui si è 
+eseguito il comando `code .`, in tal caso premere "Si."*
 
 ![WSL indicator in VS Code](https://code.visualstudio.com/assets/docs/remote/wsl/wsl-statusbar-indicator.png)
 
