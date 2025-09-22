@@ -208,8 +208,15 @@ Nel caso di macOS, è possibile installare anche queste componenti aggiuntive tr
 % brew install cmake sfml@2 ninja
 ```
 
+Per completare l'installazione è necessario aggiungere la seguente riga al file `.zshrc`, che potete aprire
+utilizzando il Visual Studio Code (`code ~/.zshrc`):
+
+```txt
+export SFML_DIR="`brew --prefix`/opt/homebrew/opt/sfml@2/"  
+```
+
 > [!TIP]
-> Per verificare la corretta installazione dei componenti aggiuntivi, eseguite i seguenti comandi:
+> Potete verificare la corretta installazione dei componenti aggiuntivi, eseguendo i seguenti comandi:
 >
 > ```zsh
 > % cmake --version

@@ -59,7 +59,7 @@ Prodotti software analoghi sono disponibili su altre piattaforme di uso comune, 
 - **macOS**: essendo simile a Linux, la configurazione è semplificata ed è illustrata in
   [questa guida](other-OSes/macOSGuide.md).
 
-Nel caso di Windows è poi necessario procedere poi con l'installazione [descritta sopra](#strumenti-software-necessari)
+Nel caso di Windows è poi necessario procedere poi con l'installazione [appena descritta](#strumenti-software-necessari)
 dopo aver completato l'installazione di Ubuntu 24.04 in WSL.
 
 ## Editor
