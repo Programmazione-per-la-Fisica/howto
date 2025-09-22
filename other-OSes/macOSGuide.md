@@ -7,11 +7,11 @@
   - [Installazione di Visual Studio Code](#installazione-di-visual-studio-code)
   - [Installazione di componenti aggiuntivi](#installazione-di-componenti-aggiuntivi)
   - [Aggiornamento dei software installati](#aggiornamento-dei-software-installati)
-- [Risoluzione dei problemi](#risoluzione-dei-problemi)
-  - [Non è possibile lanciare VSCode da terminale](#non-è-possibile-lanciare-vscode-da-terminale)
-  - [Problemi di linking durante la compilazione con gcc](#problemi-di-linking-durante-la-compilazione-con-gcc)
-  - [Metodi alternativi di compilazione del codice _C++_](#metodi-alternativi-di-compilazione-del-codice-c)
-  - [Non è possibile utilizzare i comandi installati tramite Homebrew](#non-è-possibile-utilizzare-i-comandi-installati-tramite-homebrew)
+  - [Risoluzione dei problemi](#risoluzione-dei-problemi)
+    - [Non è possibile lanciare VSCode da terminale](#non-è-possibile-lanciare-vscode-da-terminale)
+    - [Problemi di linking durante la compilazione con gcc](#problemi-di-linking-durante-la-compilazione-con-gcc)
+    - [Metodi alternativi di compilazione del codice _C++_](#metodi-alternativi-di-compilazione-del-codice-c)
+    - [Non è possibile utilizzare i comandi installati tramite Homebrew](#non-è-possibile-utilizzare-i-comandi-installati-tramite-homebrew)
 
 Questa guida contiene le istruzioni da seguire per configurare, all'interno del sistema operativo _macOS_, un ambiente
 di lavoro adatto al corso di Programmazione per la Fisica.
@@ -197,7 +197,8 @@ Alcune note in merito all'installazione:
 
 Più avanti nel corso, faremo uso di strumenti aggiuntivi, quali:
 
-- [CMake](https://cmake.org/): un software libero multipiattaforma che automatizza la compilazione di progetti complessi
+- [CMake](https://cmake.org/): un software libero multi-piattaforma che automatizza la compilazione di progetti
+  complessi
 - [SFML](https://www.sfml-dev.org/): una libreria multimediale (che utilizzeremo per lo sviluppo di applicazioni
   grafiche)
 
@@ -267,9 +268,9 @@ comando:
 > [pagina web](https://formulae.brew.sh/formula/)
 > (prova, ad esempio, a verificare le compatibilità per il compilatore [`gcc`'](https://formulae.brew.sh/formula/gcc)).
 
-# Risoluzione dei problemi
+## Risoluzione dei problemi
 
-## Non è possibile lanciare VSCode da terminale
+### Non è possibile lanciare VSCode da terminale
 
 Qualora, lanciando il comando `code` da terminale, tu incorra in un errore simile a:
 
@@ -295,7 +296,7 @@ A questo punto, prova di nuovo ad eseguire il comando `code` da terminale:
 % code
 ```
 
-## Problemi di linking durante la compilazione con gcc
+### Problemi di linking durante la compilazione con gcc
 
 Qualora, durante la compilazione con `g++-15`, riscontrassi errori di _linking_ simili a:
 
@@ -328,7 +329,7 @@ tutte le altre opzioni e gli argomenti che avresti utilizzato per la compilazion
 
 Qualora questo suggerimento non dovesse risolvere il problema, prova la soluzione proposta [qui](#metodi-alternativi-di-compilazione-del-codice-c).
 
-## Metodi alternativi di compilazione del codice _C++_
+### Metodi alternativi di compilazione del codice _C++_
 
 Come discusso in questa guida e ripetuto durante i laboratori, chi usa mac OS dovrebbe preferenzialmente utilizzare il
 comando `g++-15` per la compilazione del codice sviluppato.
@@ -341,7 +342,7 @@ In ogni caso, nel medio termine (es.: nei giorni successivi al laboratorio), il 
 Riferisciti alle istruzioni [qui sotto](#non-è-possibile-utilizzare-i-comandi-installati-tramite-homebrew) e sentiti
 libero di contattare [i docenti](https://virtuale.unibo.it/mod/page/view.php?id=1045205)
 
-## Non è possibile utilizzare i comandi installati tramite Homebrew
+### Non è possibile utilizzare i comandi installati tramite Homebrew
 
 Qualora, i programmi installati tramite `brew` smettano di funzionare (ad es.: `gcc`, `root`, etc ...), per prima cosa
 puoi verificare è lo stato generale del package manager tramite il comando:
@@ -371,7 +372,7 @@ Come discusso sopra, puoi farlo eseguendo i comandi:
 
 **Verificare lo stato di installazione degli xcode CLT:**
 
-In primis esegui il comando:
+In primo luogo, esegui il comando:
 
 ```zsh
 % xcode-select --install

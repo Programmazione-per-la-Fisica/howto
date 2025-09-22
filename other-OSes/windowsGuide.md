@@ -10,17 +10,17 @@
   - [Installazione di Visual Studio Code](#installazione-di-visual-studio-code)
     - [Aprire una cartella remota](#aprire-una-cartella-remota)
   - [Verificare il funzionamento dell'interfaccia grafica](#verificare-il-funzionamento-dellinterfaccia-grafica)
-- [Risoluzione dei problemi](#risoluzione-dei-problemi)
-  - [Fallimento nella creazione dello user su Ubuntu](#fallimento-nella-creazione-dello-user-su-ubuntu)
-  - [Reset della password in Ubuntu](#reset-della-password-in-ubuntu)
-  - [sudo apt update fallisce "Temporary failure resolving 'archive.ubuntu.com'"](#sudo-apt-update-fallisce-temporary-failure-resolving-archiveubuntucom)
-  - [Impossibile avviare la macchina virtuale perché una funzionalità richiesta non è installata](#impossibile-avviare-la-macchina-virtuale-perché-una-funzionalità-richiesta-non-è-installata)
-  - [Impossibile avviare VSCode su WSL con il comando `code`](#impossibile-avviare-vscode-su-wsl-con-il-comando-code)
-  - [Passare file tra Windows e WSL](#passare-file-tra-windows-e-wsl)
-    - [Accedere a Windows file system da WSL](#accedere-a-windows-file-system-da-wsl)
-    - [Accedere al filesystem Linux da Windows](#accedere-al-filesystem-linux-da-windows)
-  - [Cambiare la versione di WSL](#cambiare-la-versione-di-wsl)
-  - [Aggiornare la distribuzione di Ubuntu](#aggiornare-la-distribuzione-di-ubuntu)
+  - [Risoluzione dei problemi](#risoluzione-dei-problemi)
+    - [Fallimento nella creazione dello user su Ubuntu](#fallimento-nella-creazione-dello-user-su-ubuntu)
+    - [Reset della password in Ubuntu](#reset-della-password-in-ubuntu)
+    - [sudo apt update fallisce "Temporary failure resolving 'archive.ubuntu.com'"](#sudo-apt-update-fallisce-temporary-failure-resolving-archiveubuntucom)
+    - [Impossibile avviare la macchina virtuale perché una funzionalità richiesta non è installata](#impossibile-avviare-la-macchina-virtuale-perché-una-funzionalità-richiesta-non-è-installata)
+    - [Impossibile avviare VSCode su WSL con il comando `code`](#impossibile-avviare-vscode-su-wsl-con-il-comando-code)
+    - [Passare file tra Windows e WSL](#passare-file-tra-windows-e-wsl)
+      - [Accedere a Windows file system da WSL](#accedere-a-windows-file-system-da-wsl)
+      - [Accedere al filesystem Linux da Windows](#accedere-al-filesystem-linux-da-windows)
+    - [Cambiare la versione di WSL](#cambiare-la-versione-di-wsl)
+    - [Aggiornare la distribuzione di Ubuntu](#aggiornare-la-distribuzione-di-ubuntu)
 
 Questa guida descrive i passi necessari per configurare la propria macchina _Windows_ in preparazione per il corso di
 Programmazione per la Fisica.
@@ -72,7 +72,7 @@ _stable_ più recenti), è possibile utilizzare il comando semplificato di insta
 
 > [!CAUTION]
 > Prima dell'installazione, assicurarsi che gli strumenti di Virtualizzazione di Windows
-> siano attivi. Per farlo è sufficiente cercare nella barra Start `features`, aprendo 
+> siano attivi. Per farlo è sufficiente cercare nella barra Start `features`, aprendo
 > l'opzione `Attiva o disattiva funzionalità di Windows`. Da li assicurarsi che
 > `Piattaforma macchina virtuale` e `Piattaforma Windows Hypervisor` siano attive.
 > Se non lo fossero, attivarle e cliccare OK. Il computer si riavvierà al termine.
@@ -139,7 +139,7 @@ e **installalo**.
 > [!NOTE]
 > Premi Invio per eseguire il comando.
 
-Una volta installato il Sottosistema Windows per Linux passare alla sezione 
+Una volta installato il Sottosistema Windows per Linux passare alla sezione
 [Configurare la distribuzione](#configurare-la-distribuzione) di questa guida.
 
 ## Installazione manuale WSL 1 - Build da 16215 a 18360
@@ -152,11 +152,12 @@ Per installare WSL1 seguire i soli passaggi 1, 3 e 6 presentati nella sezione [p
 
 ## Configurare la distribuzione
 
-Avvia la distribuzione cercando Ubuntu nel menù di start (o WSL); per gli avvii successivi potrai anche farlo lanciando i comandi `bash` o `wsl` da Powershell o dal Prompt dei Comandi. 
+Avvia la distribuzione cercando Ubuntu (o WSL) nel menù di start.
 
 > [!CAUTION]
-> Come spiegato sopra, è possibile che dopo il riavvio dall'installazione di WSL, una finestra del terminale si apra 
-> automaticamente per consentire le ultime operazioni di installazione. Lasciar terminare e quindi proseguire nella guida.
+> Come spiegato sopra, è possibile che dopo il riavvio dall'installazione di WSL, una finestra del terminale si apra
+> automaticamente per consentire le ultime operazioni di installazione. Lasciar terminare e quindi proseguire nella
+> guida.
 
 Ti verrà poi chiesto di **immettere un nome utente** e **una password**. Questi sono specifici della distribuzione di
 Ubuntu installata e non hanno alcuna relazione con nome utente e password di Windows.
@@ -250,7 +251,7 @@ Visual Studio Code (VS Code).
 > [!IMPORTANT]
 > Prima di iniziare, assicurati di aver completato l'installazione di WSL.
 
-In primis, **scarica e installa** [VS Code](https://code.visualstudio.com/) **su Windows**.
+In primo luogo, **scarica e installa** [VS Code](https://code.visualstudio.com/) **su Windows**.
 
 Durante l'installazione assicurati di selezionare l'opzione "Add to PATH" così da poter aprire VS Code con il comando
 `code` da terminale. Al termine riavvia il PC.
@@ -261,8 +262,8 @@ Durante l'installazione assicurati di selezionare l'opzione "Add to PATH" così 
 A questo punto, installa l'estensione **Visual Studio Code Remote - WSL**, che permette di usare WSL come ambiente di
 sviluppo direttamente da VS Code.
 
-Per farlo, apri il seguente
-[link](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+Per farlo, apri il
+[seguente link](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
 e procedi.
 
 ### Aprire una cartella remota
@@ -274,10 +275,11 @@ Una volta configurato VS Code, sarà possibile aprire una cartella interna a WSL
 2. Esegui il comando `code .` da terminale.
 
 Dopo qualche istante si aprirà una nuova finestra di VS Code, ed eseguirà l'installazione e la configurazione
-automaticamente. Una volta completato apparirà un nuovo indicatore nell'angolo in basso a sinistra, indicando la riuscita dell'operazione. 
+automaticamente. Una volta completato apparirà un nuovo indicatore nell'angolo in basso a sinistra, indicando la
+riuscita dell'operazione.
 
-*Potrebbe apparire un messaggio di conferma di affidabilità della cartella da cui si è 
-eseguito il comando `code .`, in tal caso premere "Si."*
+_Potrebbe apparire un messaggio di conferma di affidabilità della cartella da cui si è
+eseguito il comando `code .`, in tal caso premere "Si."_
 
 ![WSL indicator in VS Code](https://code.visualstudio.com/assets/docs/remote/wsl/wsl-statusbar-indicator.png)
 
@@ -311,9 +313,9 @@ Se si apre una finestra come la seguente, l'installazione ha avuto successo.
 
 In caso contrario, si rimanda a [questa guida](XSrvGuide.md), per l'installazione di programmi aggiuntivi.
 
-# Risoluzione dei problemi
+## Risoluzione dei problemi
 
-## Fallimento nella creazione dello user su Ubuntu
+### Fallimento nella creazione dello user su Ubuntu
 
 Se all'avvio di WSL il prompt è simile a:
 
@@ -332,13 +334,13 @@ Per risolvere, aprire Powershell come amministratore e eseguire il comando:
 > [!NOTE]
 > Può essere necessario variare il comando in base alla distribuzione di linux installata (i.e. `ubuntu-2204.exe`). Si
 > suggerisce di sfruttare il completamento automatico per individuare il comando corretto, digitando per esempio
-> `ubuntu` seguito dal tasto ⇆ (tab). 
+> `ubuntu` seguito dal tasto ⇆ (tab).
 >
 > Il nome utente  DEVE essere quello indicato in fase di installazione. Nel caso in cui non ci si ricordasse il nome
 > utente, è possibile leggere l'elenco degli utenti con: `cat /etc/passwd`. Il proprio utente sarà tra gli ultimi
 > presenti nella lista.
 
-## Reset della password in Ubuntu
+### Reset della password in Ubuntu
 
 Per resettare la propria password su Ubuntu, qualora venga dimenticata, aprire Powershell come amministratore ed
 eseguire il comando:
@@ -362,7 +364,7 @@ Retype new password:
 > Durante la digitazione della password non noterete alcuno spostamento del cursore.
 > La cosa è perfettamente normale.
 
-## sudo apt update fallisce "Temporary failure resolving 'archive.ubuntu.com'"
+### sudo apt update fallisce "Temporary failure resolving 'archive.ubuntu.com'"
 
 Il problema può essere causato da una cattiva configurazione di rete.
 
@@ -379,7 +381,7 @@ Avviare Powershell come amministratore, ed eseguire i seguenti comandi:
 
 Riavviare in seguito il dispositivo.
 
-## Impossibile avviare la macchina virtuale perché una funzionalità richiesta non è installata
+### Impossibile avviare la macchina virtuale perché una funzionalità richiesta non è installata
 
 Il problema può essere causato dalla disattivazione a livello di BIOS della Virtualizzazione sulla prossima macchina.
 
@@ -390,9 +392,9 @@ Si può verificare il problema verificando lo stato della `Virtualizzazione` nel
 > Usando la combinazione di tasti <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Esc</kbd> è possibile aprire rapidamente
 > Gestione Attività. Se la scheda non è visibile cliccare su `Più dettagli`.
 
-Se Virtualizzazione è indicato come disabilitato è necessario abilitarlo da BIOS. 
+Se Virtualizzazione è indicato come disabilitato è necessario abilitarlo da BIOS.
 
-## Impossibile avviare VSCode su WSL con il comando `code`
+### Impossibile avviare VSCode su WSL con il comando `code`
 
 VSCode server è impostato erroneamente, chiudere WSL e VSCode.
 
@@ -405,9 +407,9 @@ Da Powershell ed eseguire il seguente comando:
 Dopodiché riavviare VSCode **da Windows** e aprire una nuova finestra su WSL cliccando sul bottone verde in basso a
 sinistra e selezionando "Connect to WSL" dal menù a tendina.
 
-## Passare file tra Windows e WSL
+### Passare file tra Windows e WSL
 
-### Accedere a Windows file system da WSL
+#### Accedere a Windows file system da WSL
 
 Da WSL è possibile accedere ai file presenti sulla propria macchina Windows tramite un Mount point.
 
@@ -426,7 +428,7 @@ A questo punto possono essere utili i comandi `cp` o `mv` per trasferire i file 
 > Si raccomanda la massima attenzione quando si naviga nelle cartelle di sistema, per evitare di causare danni al
 > sistema operativo Windows.
 
-### Accedere al filesystem Linux da Windows
+#### Accedere al filesystem Linux da Windows
 
 Il filesystem Linux è salvato in una posizione nascosta e non facilmente raggiungibile del sistema PER BUONE RAGIONI.
 
@@ -463,7 +465,7 @@ Per esempio il comando sopra aprirà Esplora Risorse nella cartella home dell'ut
 
 A questo punto è possibile operare sui file in maniera usuale.
 
-## Cambiare la versione di WSL
+### Cambiare la versione di WSL
 
 Nel caso in cui sia già stata installata una distribuzione Linux e vi sia intenzione di cambiare la versione di WSL per
 la specifica distribuzione, è possibile farlo da Powershell.
@@ -498,7 +500,7 @@ lanciare sarebbe:
 > Si ricorda che per poter aggiornare a WSL 2 è necessario aver attivato la funzionalità aggiuntiva "Virtual Machine
 > Platform" come spiegato nel punto 1 della guida.
 
-## Aggiornare la distribuzione di Ubuntu
+### Aggiornare la distribuzione di Ubuntu
 
 Se in seguito all'installazione, la versione di Ubuntu installata non è la più recente, è possibile aggiornarla da linea
 di comando.
@@ -508,6 +510,7 @@ Per verificare la versione installata eseguire il seguente comando da WSL:
 ```bash
 $ cat /etc/os-release
 ```
+
 Se `VERSION_ID` non è minore di 24.04 è possibile aggiornare con il seguente comando:
 
 ```bash
