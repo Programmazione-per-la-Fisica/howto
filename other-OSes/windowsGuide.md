@@ -180,6 +180,17 @@ Ubuntu installata e non hanno alcuna relazione con nome utente e password di Win
 > Se la dimensione del font del terminale risultasse essere troppo piccola, è possibile zoomare facendo CTRL+scroll
 > del mouse/trackpad.
 
+> [!TIP]
+> Per verificare che l'installazione di WSL sia andata a buon fine, chiudi e riapri Ubuntu 24.04 LTS, cercando il
+> programma come fai con le altre applicazioni Windows, poi digita il comando:
+>
+> ```bash
+> $ whoami
+> carlo
+> ```
+>
+> In caso di successo, il tuo nome utente verrà stampato sul terminale.
+
 ### Aggiornamento dei pacchetti software
 
 Aggiorna quindi il catalogo pacchetti della distribuzione.Per Ubuntu è possibile farlo eseguendo il seguente comando
@@ -193,17 +204,6 @@ $ sudo apt update && sudo apt upgrade
 > Il comando `sudo`, usato come prefisso al comando `apt`, consente di eseguire quest'ultimo come amministratore di
 > sistema (detto _root_ nel gergo Unix) e richiede l'inserimento della password utente.
 > Si raccomanda di aggiornare periodicamente la distribuzione, indicativamente una volta alla settimana.
-
-> [!TIP]
-> Per verificare che l'installazione di WSL sia andata a buon fine, chiudi e riapri Ubuntu 24.04 LTS, cercando il
-> programma come fai con le altre applicazioni Windows, poi digita il comando:
->
-> ```bash
-> $ whoami
-> carlo
-> ```
->
-> In caso di successo, il tuo nome utente verrà stampato sul terminale.
 
 ### Installazione degli strumenti di base
 
