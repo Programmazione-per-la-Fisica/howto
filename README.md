@@ -88,7 +88,7 @@ Inoltre possono risultare utili le seguenti pagine web:
 - [https://explainshell.com](https://explainshell.com/) permette (molto spesso) di analizzare in dettaglio comandi
   complessi.
 
-Trovate un foglio riepilogativo dei comandi di uso più comune in [comandiUtiliTerminale.md](comandiUtiliTerminale.md).
+Trovate un foglio riepilogativo dei comandi di uso più comune in [questa pagina](other-OSes/usefulCliCommands.md).
   
 ## Appendice: ROOT
 

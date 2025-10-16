@@ -6,6 +6,7 @@
   - [Installazione manuale WSL 2 - Build 18362 o superiori](#installazione-manuale-wsl-2---build-18362-o-superiori)
   - [Installazione manuale WSL 1 - Build da 16215 a 18360](#installazione-manuale-wsl-1---build-da-16215-a-18360)
   - [Configurare la distribuzione](#configurare-la-distribuzione)
+    - [Aggiornamento dei pacchetti software](#aggiornamento-dei-pacchetti-software)
     - [Installazione degli strumenti di base](#installazione-degli-strumenti-di-base)
   - [Installazione di Visual Studio Code](#installazione-di-visual-studio-code)
     - [Aprire una cartella remota](#aprire-una-cartella-remota)
@@ -179,7 +180,9 @@ Ubuntu installata e non hanno alcuna relazione con nome utente e password di Win
 > Se la dimensione del font del terminale risultasse essere troppo piccola, è possibile zoomare facendo CTRL+scroll
 > del mouse/trackpad.
 
-Aggiorna quindi il catalogo pacchetti della distribuzione. Per Ubuntu è possibile farlo eseguendo il seguente comando
+### Aggiornamento dei pacchetti software
+
+Aggiorna quindi il catalogo pacchetti della distribuzione.Per Ubuntu è possibile farlo eseguendo il seguente comando
 dal terminale:
 
 ``` bash
