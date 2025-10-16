@@ -27,7 +27,7 @@ $ ls -l /home/user/Documents
 | `cd`         | Cambia la cartella corrente                 | `cd Documents`                 |                                  |
 | `ls`         | Elenca files e/o cartelle                   | `ls -l`                        | `-t` (ordina per tempo), `-a` (mostra file nascosti) `-h` (dimensioni file leggibili) |
 | `pwd`        | Stampa la cartella di lavoro corrente       | `pwd`                          |                                  |
-| `rm`         | Rimuovi files e/o cartelle                  | `rm file.txt`                  | `-r` (ricorsivo per le cartelle) |
+| `rm`         | Rimuovi files e/o cartelle                  | `rm file.txt`                  | `-r` (ricorsivo per file e le cartelle), `-i` (richiede conferma in merito ai file e cartelle da cancellare) |
 | `file`       | Determina la tipologia di un file           | `file script.sh`               |                                  |
 
 ## Percorsi (Paths)
