@@ -1,6 +1,6 @@
 # Uso minimale di Compiler Explorer
 
-[Compiler Explorer](https://godbolt.org) è uno strumento online molto utile per fare esperimenti e piccoli esercizi evitando l'uso di un editor e di un terminale sul proprio computer.
+[Compiler Explorer](https://godbolt.org) è uno strumento online molto utile per fare esperimenti e piccoli esercizi di programamzione, evitando l'uso di un editor e di un terminale sul proprio computer. Lo strumento viene usato anche durante l'orale, quindi è opportuno prenderne familiarità.
 
 La pagina di default, una volta accettate le condizioni di utilizzo, si presenta così:
 
@@ -25,6 +25,8 @@ Infine, è anche possibile eseguire il codice prodotto, selezionando l'opzione "
 
 ![CE with execution](ce-with-execution.png)
 
-In questa configurazione, come si vede, non è stata usata la lettura di dati da `std::cin`. Per farlo è necessario abilitare un _executor_. Lo si può fare selezionando "Execution only" o "Executor From This" nel menu "Add new...", disponibile sia nella sezione di sinistra che nella sezione di destra. Ma si possono fare molte cose senza leggere dati dall'input, quindi questa possibilità è meno utile di quanto si pensi.
+In questa configurazione, come si vede, non è stata usata la lettura di dati da `std::cin`. Per farlo è necessario abilitare un _executor_. Lo si può fare selezionando prima "Execution only" o "Executor From This" nel menu "Add new...", disponibile sia nella sezione di sinistra che nella sezione di destra, e poi il bottone "Execution stdin". Si aprirà un campo in cui si possono inserire tutti i valori che si inserirebbero uno alla volta in base alle chiamate `std::cin >> ...`. Tuttavia si possono fare molte cose senza leggere dati dall'input, quindi questa possibilità è meno utile di quanto si pensi.
 
-Compiler Explorer offre molte altre funzionalità, a partire dalla scelta del compilatore da utilizzare o anche dello stesso linguaggio di programmazione. Integra inoltre molti strumenti, utili per un uso avanzato.
+E' possibile condividere con altri, ad esempio con i docenti, un esercizio, generando uno _short URL_. Per farlo, cliccare "Share" e poi "Short Link" in alto a destra.
+
+Per chi vuole approfondire, Compiler Explorer offre molte altre funzionalità, a partire dalla scelta del compilatore da utilizzare o anche dello stesso linguaggio di programmazione. Integra inoltre molti strumenti avanzati di analisi del codice o dei binari generati.
