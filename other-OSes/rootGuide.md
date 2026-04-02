@@ -3,6 +3,8 @@
 - [Installazione del pacchetto di analisi ROOT (OPZIONALE)](#installazione-del-pacchetto-di-analisi-root-opzionale)
   - [Installazione su Ubuntu (o Windows con WSL)](#installazione-su-ubuntu-o-windows-con-wsl)
   - [Installazione in macOS](#installazione-in-macos)
+  - [Risoluzione dei problemi](#risoluzione-dei-problemi)
+    - [Mismatch tra la versione del compilatore e del pacchetto ROOT (macOS)](#mismatch-tra-la-versione-del-compilatore-e-del-pacchetto-root-macos)
 
 ## Installazione su Ubuntu (o Windows con WSL)
 
@@ -35,7 +37,8 @@ liblzma-dev libxxhash-dev liblz4-dev libzstd-dev
 > In caso i comandi presentati non risultino corretti, consulta
 > [questa pagina](https://root.cern/install/dependencies/).
 
-A questo punto, scarica i binari precompilati di ROOT al presente [link](https://root.cern/install/all_releases/).
+A questo punto, scarica i binari precompilati di ROOT al
+[link sulla pagina ufficiale del pacchetto](https://root.cern/install/all_releases/).
 
 Cliccando sulla **latest stable** vedrai che esistono diverse versioni di pacchetti precompilati corrispondenti a
 diversi sistemi operativi.
@@ -138,3 +141,60 @@ Una volta installato Homebrew, per installare ROOT, esegui il comando:
 > ```
 >
 > se l'installazione ha avuto successo, puoi uscire da ROOT digitando `.q` e premendo INVIO.
+
+## Risoluzione dei problemi
+
+### Mismatch tra la versione del compilatore e del pacchetto ROOT (macOS)
+
+Qualora, eseguendo `root` su macOS a seguito di un aggiornamento del sistema operativo o di _Xcode_, tu incorra in un
+errore simile a:
+
+```zsh
+% root
+/opt/homebrew/Cellar/root/6.38.04/etc/root/cling/std_darwin.modulemap:73:64: error: header '__type_traits/add_lvalue_reference.h' not found
+    module add_lvalue_reference                       { header "__type_traits/add_lvalue_reference.h" }
+                                                               ^
+input_line_1:1:10: note: submodule of top-level module 'std' implicitly imported here
+#include <new>
+         ^
+Warning in cling::IncrementalParser::CheckABICompatibility():
+  Failed to extract C++ standard library version.
+Warning in cling::IncrementalParser::CheckABICompatibility():
+  Possible C++ standard library mismatch, compiled with _LIBCPP_ABI_VERSION '1'
+  Extraction of runtime standard library version was: ''
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.38.04                        https://root.cern |
+  | (c) 1995-2025, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for macosxarm64 on Mar 11 2026, 21:39:24                   |
+  | From tags/6-38-04@6-38-04                                        |
+  | With Apple clang version 17.0.0 (clang-1700.6.4.2) std201703     |
+  | Try '.help'/'.?', '.demo', '.license', '.credits', '.quit'/'.q'  |
+   ------------------------------------------------------------------
+```
+
+puoi provare a reinstallare ROOT tramite `brew`, ricompilandolo:
+
+```zsh
+% brew reinstall -s root
+Warning: building from source is not supported!
+You're on your own. Failures are expected so don't create any issues, please!
+==> Fetching downloads for: root
+✔︎ API Source root.rb                                                                                                                  Verified      6.9KB/  6.9KB
+✔︎ Formula root (6.38.04)                                                                                                              Verified    386.7MB/386.7MB
+==> Reinstalling root 
+==> cmake -S . -B builddir -DCLING_CXX_PATH=clang++ -DCMAKE_CXX_STANDARD=17 -DCMAKE_INSTALL_ELISPDIR=/opt/homebrew/Cellar/root/6.38.04/share/emacs/site-lisp/root
+==> cmake --build builddir
+==> ctest -R tutorial-tree --verbose --parallel 10 --test-dir builddir
+==> cmake --install builddir
+==> Caveats
+[...]
+```
+
+> [!WARNING]
+> Non è assicurato che il processo di ricompilazione funzioni.
+> Tenta questa opzione solo se non ce ne sono altre e **consultati coi docenti** prima di eseguirla.
+
+> [!NOTE]
+> In questo caso il problema è dovuto al fatto che [la versione precompilata](https://root.cern/releases/release-63610/)
+> di ROOT sia stata generata utilizzando una versione del compilatore meno recente di quella installata tramite
+> l'aggiornamento di macOS.
