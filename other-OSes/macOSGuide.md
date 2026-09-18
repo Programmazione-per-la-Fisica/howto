@@ -257,6 +257,9 @@ Nel caso delle componenti installate tramite brew, l'aggiornamento si effettua
 Il primo comando aggiorna il programma `brew` e la lista dei pacchetti (detti _formulae_) disponibili. Il secondo
 effettua l'aggiornamento dei pacchetti installati.
 
+> [!NOTE]
+> Questi comandi richiedono una conferma da parte dell'utente, che può essere fornita digitando `y` e premendo _Invio_.
+
 Prima di eseguire il comando `brew upgrade`, puoi controllare la lista dei pacchetti che verranno aggiornati col
 comando:
 
@@ -424,7 +427,7 @@ i pacchetti tramite esso installati.
 
 La lista dei comandi è documentata in seguito, ma, in particolar modo in questo
 caso, ti **consigliamo vivamente** di **contattare
-[i docenti](https://github.com/Programmazione-per-la-Fisica#anno-accademico-202526)** prima di procedere:
+[i docenti](https://github.com/Programmazione-per-la-Fisica#anno-accademico-202627)** prima di procedere:
 
 ```zsh
 % brew bundle dump
