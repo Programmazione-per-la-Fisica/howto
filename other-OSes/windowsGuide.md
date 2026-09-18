@@ -81,7 +81,7 @@ _stable_ più recenti), è possibile utilizzare il comando semplificato di insta
 Per farlo è necessario aprire Powershell come Amministratore e lanciare il comando.
 
 ```cmd
-> wsl.exe --install -d Ubuntu-24.04
+> wsl.exe --install -d Ubuntu-26.04
 ```
 
 Dopo un riavvio, WSL sarà pronta all'uso.
@@ -181,7 +181,7 @@ Ubuntu installata e non hanno alcuna relazione con nome utente e password di Win
 > del mouse/trackpad.
 
 > [!TIP]
-> Per verificare che l'installazione di WSL sia andata a buon fine, chiudi e riapri Ubuntu 24.04 LTS, cercando il
+> Per verificare che l'installazione di WSL sia andata a buon fine, chiudi e riapri Ubuntu 26.04 LTS, cercando il
 > programma come fai con le altre applicazioni Windows, poi digita il comando:
 >
 > ```bash
@@ -191,19 +191,26 @@ Ubuntu installata e non hanno alcuna relazione con nome utente e password di Win
 >
 > In caso di successo, il tuo nome utente verrà stampato sul terminale.
 
+> [!TIP]
+> Una volta inserite le credenziali, potrebbe apparire un messaggio di richiesta di raccolta dati di telemetria. È possibile scegliere se accettare o meno, ma non è necessario per il corretto funzionamento di WSL.
+
 ### Aggiornamento dei pacchetti software
 
 Aggiorna quindi il catalogo pacchetti della distribuzione.Per Ubuntu è possibile farlo eseguendo il seguente comando
 dal terminale:
 
 ``` bash
-$ sudo apt update && sudo apt upgrade
+$ sudo apt update 
+$ sudo apt upgrade
 ```
 
 > [!NOTE]
 > Il comando `sudo`, usato come prefisso al comando `apt`, consente di eseguire quest'ultimo come amministratore di
 > sistema (detto _root_ nel gergo Unix) e richiede l'inserimento della password utente.
 > Si raccomanda di aggiornare periodicamente la distribuzione, indicativamente una volta alla settimana.
+
+> [!NOTE]
+> Il primo comando aggiorna il catalogo dei pacchetti software disponibili, mentre il secondo aggiorna i pacchetti già installati sulla distribuzione.
 
 ### Installazione degli strumenti di base
 
@@ -220,25 +227,32 @@ $ sudo apt install git clang-format g++
 >
 > ```bash
 > $ git --version
-> git version 2.43.0
+> git version 2.53.0
 > ```
 >
 > ```bash
 > $ g++ --version
-> g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
-> Copyright (C) 2023 Free Software Foundation, Inc.
+> g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+> Copyright (C) 2025 Free Software Foundation, Inc.
 > This is free software; see the source for copying conditions.  There is NO
 > warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 > ```
 >
 > ```bash
 > $ clang-format --version
-> clang-format version 18.1.3
+> Ubuntu clang-format version 21.1.8 (6ubuntu1)
 > ```
 >
 > I numeri di versione riportati sopra sono solo indicativi, e possono variare nel tempo, **quello che è importante**
 > è che **nessuno dei tentativi** di esecuzione **termini con un errore del tipo** `Command 'git/g++/clang-format' not
 > found`.
+
+Durante il corso verranno usati ulteriori strumenti: [`CMake`](https://cmake.org/) come _build system_ e
+[SFML](https://sfml-dev.org/) per la creazione di semplici interfacce grafiche. L'installazione è altrettanto semplice:
+
+```shell
+sudo apt install cmake ninja-build libsfml-dev
+```
 
 ## Installazione di Visual Studio Code
 
@@ -328,16 +342,30 @@ root@LAPTOP:~$
 
 indicando root come nome utente, vuol dire che l'utente di default non è stato configurato correttamente.
 
-Per risolvere, aprire Powershell come amministratore e eseguire il comando:
+Per impostare l’utente predefinito di Ubuntu in WSL, aprire il terminale Ubuntu ed eseguire:
 
-```powershell
-> ubuntu2024.exe config --default-user <USERNAME>
+```bash
+sudo nano /etc/wsl.conf
 ```
 
-> [!NOTE]
-> Può essere necessario variare il comando in base alla distribuzione di linux installata (i.e. `ubuntu-2204.exe`). Si
-> suggerisce di sfruttare il completamento automatico per individuare il comando corretto, digitando per esempio
-> `ubuntu` seguito dal tasto ⇆ (tab).
+Aggiungere le seguenti righe, sostituendo `<USERNAME>` con il proprio nome utente:
+
+```
+[user]
+default=<USERNAME>
+```
+
+Se la sezione [user] è già presente, modificare soltanto il valore di default.
+
+Salvare il file premendo `Ctrl+O`, confermare con Invio e uscire con `Ctrl+X`.
+
+Infine, chiudere Ubuntu e riavviare WSL eseguendo in PowerShell:
+
+```powershell
+> wsl --shutdown
+```
+
+Alla successiva apertura, Ubuntu utilizzerà automaticamente l’utente indicato.
 >
 > Il nome utente  DEVE essere quello indicato in fase di installazione. Nel caso in cui non ci si ricordasse il nome
 > utente, è possibile leggere l'elenco degli utenti con: `cat /etc/passwd`. Il proprio utente sarà tra gli ultimi
@@ -514,7 +542,7 @@ Per verificare la versione installata eseguire il seguente comando da WSL:
 $ cat /etc/os-release
 ```
 
-Se `VERSION_ID` non è minore di 24.04 è possibile aggiornare con il seguente comando:
+Se `VERSION_ID` è minore di 26.04 è possibile aggiornare con il seguente comando:
 
 ```bash
 $ sudo do-release-upgrade

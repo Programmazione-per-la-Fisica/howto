@@ -9,8 +9,8 @@
 - [Appendice: ROOT](#appendice-root)
 
 Questa repository contiene la documentazione necessaria per configurare l'ambiente di lavoro per l'insegnamento di
-_[Programmazione per la Fisica](https://github.com/Programmazione-per-la-Fisica/pf2025)_,
-corso di laurea in Fisica, Università di Bologna, Anno Accademico 2025/2026.
+_[Programmazione per la Fisica](https://github.com/Programmazione-per-la-Fisica/pf2026)_,
+corso di laurea in Fisica, Università di Bologna, Anno Accademico 2026/2027.
 
 Il contenuto della repository è scaricabile sul proprio computer usando il comando `git`:
 
@@ -20,7 +20,7 @@ git clone https://github.com/Programmazione-per-la-Fisica/howto.git
 
 ## Piattaforma di riferimento
 
-La piattaforma di riferimento del corso è la distribuzione **Linux Ubuntu 24.04**.
+La piattaforma di riferimento del corso è la distribuzione **Linux Ubuntu 26.04**.
 
 ## Strumenti software necessari
 
@@ -60,7 +60,7 @@ Prodotti software analoghi sono disponibili su altre piattaforme di uso comune, 
   [questa guida](other-OSes/macOSGuide.md).
 
 Nel caso di Windows è poi necessario procedere poi con l'installazione [appena descritta](#strumenti-software-necessari)
-dopo aver completato l'installazione di Ubuntu 24.04 in WSL.
+dopo aver completato l'installazione di Ubuntu 26.04 in WSL.
 
 ## Editor
 
