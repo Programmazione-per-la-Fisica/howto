@@ -192,7 +192,7 @@ Ubuntu installata e non hanno alcuna relazione con nome utente e password di Win
 > In caso di successo, il tuo nome utente verrà stampato sul terminale.
 
 > [!TIP]
-> Una volta inserite le credenziali, potrebbe apparire un messaggio di richiesta di raccoglta dati di telemetria. È possibile scegliere se accettare o meno, ma non è necessario per il corretto funzionamento di WSL.
+> Una volta inserite le credenziali, potrebbe apparire un messaggio di richiesta di raccolta dati di telemetria. È possibile scegliere se accettare o meno, ma non è necessario per il corretto funzionamento di WSL.
 
 ### Aggiornamento dei pacchetti software
 
