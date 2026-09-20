@@ -1,6 +1,6 @@
 # Configurazione dell'ambiente di lavoro su macOS
 
-- [Configurazione dell'ambiente di lavoro su macOS](#configurazione-dellambiente-di-lavoro-su-macos)
+- [Configurazione dell&#39;ambiente di lavoro su macOS](#configurazione-dellambiente-di-lavoro-su-macos)
   - [Prerequisito: Xcode e i Command Line Tools](#prerequisito-xcode-e-i-command-line-tools)
   - [Installazione di Homebrew](#installazione-di-homebrew)
   - [Installazione degli strumenti di base](#installazione-degli-strumenti-di-base)
@@ -203,14 +203,7 @@ Più avanti nel corso, faremo uso di strumenti aggiuntivi, quali:
 Nel caso di macOS, è possibile installare anche queste componenti aggiuntive tramite `brew`:
 
 ```zsh
-% brew install cmake sfml@2 ninja
-```
-
-Per completare l'installazione è necessario aggiungere la seguente riga alla fine del file `.zshrc`, che potete aprire
-utilizzando il Visual Studio Code (`code ~/.zshrc`):
-
-```txt
-export SFML_DIR="`brew --prefix`/opt/homebrew/opt/sfml@2/"
+% brew install cmake sfml ninja
 ```
 
 > [!TIP]
@@ -224,11 +217,9 @@ export SFML_DIR="`brew --prefix`/opt/homebrew/opt/sfml@2/"
 > ```
 >
 > ```zsh
-> % brew list sfml@2
-> /opt/homebrew/Cellar/sfml@2/2.6.2_1/include/SFML/ (109 files)
-> /opt/homebrew/Cellar/sfml@2/2.6.2_1/lib/libsfml-audio.2.6.2.dylib
-> /opt/homebrew/Cellar/sfml@2/2.6.2_1/lib/libsfml-graphics.2.6.2.dylib 
-> /opt/homebrew/Cellar/sfml@2/2.6.2_1/lib/libsfml-network.2.6.2.dylib
+> % brew list sfml
+> /opt/homebrew/Cellar/sfml/3.0.2/include/SFML/ (114 files)
+> /opt/homebrew/Cellar/sfml/3.0.2/lib/libsfml-audio.3.0.2.dylib
 > ...
 > ```
 >
