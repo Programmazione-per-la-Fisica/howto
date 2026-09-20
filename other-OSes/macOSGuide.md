@@ -1,6 +1,6 @@
 # Configurazione dell'ambiente di lavoro su macOS
 
-- [Configurazione dell&#39;ambiente di lavoro su macOS](#configurazione-dellambiente-di-lavoro-su-macos)
+- [Configurazione dell'ambiente di lavoro su macOS](#configurazione-dellambiente-di-lavoro-su-macos)
   - [Prerequisito: Xcode e i Command Line Tools](#prerequisito-xcode-e-i-command-line-tools)
   - [Installazione di Homebrew](#installazione-di-homebrew)
   - [Installazione degli strumenti di base](#installazione-degli-strumenti-di-base)
@@ -180,7 +180,7 @@ Alcune note in merito all'installazione:
 - ricorda di copiare l'applicazione `Visual Studio Code.app` dentro la cartella Applicazioni (Applications) come
   descritto [qui](https://code.visualstudio.com/docs/setup/mac#_installation)
 - abilita l'esecuzione dell'applicazione da Terminale seguendo le istruzioni riportate
-  [qui](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
+  [qui](https://code.visualstudio.com/docs/setup/mac#_launch-vs-code-from-the-command-line)
 
 > [!TIP]
 > Per verificare la corretta installazione di VSCode, provare ad aprirlo eseguendo il seguente comando
