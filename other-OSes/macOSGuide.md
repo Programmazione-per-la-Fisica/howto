@@ -47,8 +47,8 @@ Per l'installazione dei prodotti software necessari per il corso useremo princip
 Per l'uso di brew sono richiesti alcuni prerequisiti:
 
 - Un _Mac_ con processore 64-bit Intel o Apple Silicon
-- macOS Sonoma (14) o superiore
-- i CLT di Xcode (o Xcode), la cui installazione è stata [appenda discussa](#prerequisito-xcode-e-i-command-line-tools)
+- macOS Sequoia (15) o superiore
+- i CLT di Xcode (o Xcode), la cui installazione è stata [appena discussa](#prerequisito-xcode-e-i-command-line-tools)
 
 Installa brew, aprendo l'applicazione Terminale (o Terminal) che si trova in Applicazioni &rarr; Utility (o Applications
 &rarr; Utility) ed eseguendo il seguente comando:
@@ -87,14 +87,14 @@ Installa brew, aprendo l'applicazione Terminale (o Terminal) che si trova in App
 >
 > ```zsh
 > Example usage:
-> brew search TEXT|/REGEX/
-> brew info [FORMULA|CASK...]
-> brew install FORMULA|CASK...
-> brew update
-> brew upgrade [FORMULA|CASK...]
-> brew uninstall FORMULA|CASK...
-> brew list [FORMULA|CASK...]
-> ...
+>    brew search TEXT|/REGEX/
+>    brew info [FORMULA|CASK...]
+>    brew install FORMULA|CASK...
+>    brew update
+>    brew upgrade [FORMULA|CASK...]
+>    brew uninstall FORMULA|CASK...
+>    brew list [FORMULA|CASK...]
+>    ...
 > ```
 >
 > Qualora, invece, il Terminale si lamenti dell'assenza del comando `brew`:
@@ -116,15 +116,15 @@ Innanzitutto, verifica la versione più recente disponibile del compilatore _gcc
 
 ```zsh
 % brew info gcc
-==> gcc: stable 15.1.0 (bottled), HEAD
+==> gcc: stable 16.2.0 (bottled), HEAD
 GNU compiler collection
 https://gcc.gnu.org/
 ...
 ```
 
-e **prendi nota** del primo numero, tra i tre separati da punti nella prima riga di output (in questo caso 15:
-`==> gcc: stable 15.1.0 (bottled), HEAD`)
-  
+e **prendi nota** del primo numero, tra i tre separati da punti nella prima riga di output (in questo caso 16):
+`==> gcc: stable 16.2.0 (bottled), HEAD`)
+
 Poi, installa i seguenti pacchetti:
 
 ```zsh
@@ -140,32 +140,31 @@ Questo comando, nell'ordine, installa:
 
 > [!WARNING]
 > Il comando che gli utenti macOS utilizzeranno per la compilazione del codice C++ **contiene il numero che ti abbiamo
-> chiesto di annotare poco fa**: nel caso della presente guida il comando è `g++-15` (tutto attaccato), non  `g++`,
+> chiesto di annotare poco fa**: nel caso della presente guida il comando è `g++-16` (tutto attaccato), non  `g++`,
 > come verrà di solito indicato durante il corso.
 >
 > Il comando `g++` è probabilmente disponibile, ma è un _alias_ per un altro compilatore (se vuoi puoi leggere
 > [questa parte della guida](#metodi-alternativi-di-compilazione-del-codice-c) per una descrizione dettagliata).
 
 > [!TIP]
->
 > Per verificare la corretta installazione dei pacchetti appena descritti, eseguire i seguenti comandi:
 >
 > ```zsh
 > % git --version
-> git version 2.51.0
+> git version 2.55.0
 > ```
 >
 > ```zsh
-> % g++-15 --version
-> g++-15 (Homebrew GCC 15.1.0) 15.1.0
-> Copyright (C) 2024 Free Software Foundation, Inc.
+> % g++-16 --version
+> g++-16 (Homebrew GCC 16.2.0) 16.2.0
+> Copyright (C) 2026 Free Software Foundation, Inc.
 > This is free software; see the source for copying conditions.  There is NO
 > warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 > ```
 >
 > ```zsh
 > % clang-format --version
-> clang-format version 21.1.0
+> clang-format version 23.1.1
 > ```
 >
 > I numeri di versione riportati sopra sono solo indicativi, e possono variare nel tempo, **quello che è importante**
@@ -181,10 +180,9 @@ Alcune note in merito all'installazione:
 - ricorda di copiare l'applicazione `Visual Studio Code.app` dentro la cartella Applicazioni (Applications) come
   descritto [qui](https://code.visualstudio.com/docs/setup/mac#_installation)
 - abilita l'esecuzione dell'applicazione da Terminale seguendo le istruzioni riportate
-    [qui](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
+  [qui](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
 
 > [!TIP]
->
 > Per verificare la corretta installazione di VSCode, provare ad aprirlo eseguendo il seguente comando
 >
 > ```zsh
@@ -208,11 +206,11 @@ Nel caso di macOS, è possibile installare anche queste componenti aggiuntive tr
 % brew install cmake sfml@2 ninja
 ```
 
-Per completare l'installazione è necessario aggiungere la seguente riga al file `.zshrc`, che potete aprire
+Per completare l'installazione è necessario aggiungere la seguente riga alla fine del file `.zshrc`, che potete aprire
 utilizzando il Visual Studio Code (`code ~/.zshrc`):
 
 ```txt
-export SFML_DIR="`brew --prefix`/opt/homebrew/opt/sfml@2/"  
+export SFML_DIR="`brew --prefix`/opt/homebrew/opt/sfml@2/"
 ```
 
 > [!TIP]
@@ -220,7 +218,7 @@ export SFML_DIR="`brew --prefix`/opt/homebrew/opt/sfml@2/"
 >
 > ```zsh
 > % cmake --version
-> cmake version 4.1.1
+> cmake version 4.4.3
 >
 > CMake suite maintained and supported by Kitware (kitware.com/cmake).
 > ```
@@ -236,7 +234,7 @@ export SFML_DIR="`brew --prefix`/opt/homebrew/opt/sfml@2/"
 >
 > ```zsh
 > % ninja --version
-> 1.13.1
+> 1.13.2
 > ```
 >
 > e verificare che l'output, a meno di numeri di versione, sia consistente con quello riportato in questa guida.
@@ -269,14 +267,14 @@ comando:
 
 > [!WARNING]
 > La situazione è ben diversa quando si parla di update della release del sistema operativo (ad es. il passaggio da
-> _macOS Ventura_ a _macOS Sonoma_).
+> _macOS Sonoma_ a _macOS Sequoia_).
 > **Prima di procedere ad un cambiamento tanto radicale** è buona norma
 > **assicurarsi in anticipo che i programmi che utilizziamo**
 > normalmente **siano compatibili con la nuova versione del sistema operativo**.
 >
 > Nel caso di programmi installati tramite `brew`, possiamo effettuare tale verifica utilizzando questa
 > [pagina web](https://formulae.brew.sh/formula/)
-> (prova, ad esempio, a verificare le compatibilità per il compilatore [`gcc`'](https://formulae.brew.sh/formula/gcc)).
+> (prova, ad esempio, a verificare le compatibilità per il compilatore [`gcc`](https://formulae.brew.sh/formula/gcc)).
 
 ## Risoluzione dei problemi
 
@@ -311,7 +309,7 @@ A questo punto, prova di nuovo ad eseguire il comando `code` da terminale:
 Qualora, durante la compilazione con `g++-15`, riscontrassi errori di _linking_ simili a:
 
 ```zsh
-% g++-15 -Wall -Wextra hello.cpp -o hello 
+% g++-16 -Wall -Wextra hello.cpp -o hello 
 ld: warning: ignoring duplicate libraries: '-lgcc'
 0  0x102597648  __assert_rtn + 72
 1  0x1024cbfac  ld::AtomPlacement::findAtom(unsigned char, unsigned long long, ld::AtomPlacement::AtomLoc const*&, long long&) const + 1204
@@ -334,7 +332,7 @@ Puoi tentare di compilare il codice aggiungendo al comando `g++-15` la seguente 
 tutte le altre opzioni e gli argomenti che avresti utilizzato per la compilazione invariati, ad esempio:
 
 ```zsh
-% g++-15 -Wl,-ld_classic -Wall -Wextra hello.cpp -o hello 
+% g++-16 -Wl,-ld_classic -Wall -Wextra hello.cpp -o hello
 ```
 
 Qualora questo suggerimento non dovesse risolvere il problema, prova la soluzione proposta [qui](#metodi-alternativi-di-compilazione-del-codice-c).
@@ -342,13 +340,13 @@ Qualora questo suggerimento non dovesse risolvere il problema, prova la soluzion
 ### Metodi alternativi di compilazione del codice _C++_
 
 Come discusso in questa guida e ripetuto durante i laboratori, chi usa mac OS dovrebbe preferenzialmente utilizzare il
-comando `g++-15` per la compilazione del codice sviluppato.
+comando `g++-16` per la compilazione del codice sviluppato.
 
 In caso questo non funzioni, nel breve periodo (es.: durante un dato laboratorio), puoi tentare di compilare il codice
-sostituendo al comando `g++-15` la seguente coppia di comando e opzione `g++ -std=c++17`, lasciando tutte le altre
+sostituendo al comando `g++-16` la seguente coppia di comando e opzione `g++ -std=c++17`, lasciando tutte le altre
 opzioni e gli argomenti che avresti utilizzato per la compilazione invariati.
 
-In ogni caso, nel medio termine (es.: nei giorni successivi al laboratorio), il problema con `g++-15` va risolto.
+In ogni caso, nel medio termine (es.: nei giorni successivi al laboratorio), il problema con `g++-16` va risolto.
 Riferisciti alle istruzioni [qui sotto](#non-è-possibile-utilizzare-i-comandi-installati-tramite-homebrew) e sentiti
 libero di contattare [i docenti](https://virtuale.unibo.it/mod/page/view.php?id=1045205)
 
@@ -395,7 +393,7 @@ In caso il comando restituisca l'output che abbiamo riportato, puoi verificare l
 installare con:
 
 ```zsh
-% softwareupdate --list       
+% softwareupdate --list
 Software Update Tool
 
 Finding available software
