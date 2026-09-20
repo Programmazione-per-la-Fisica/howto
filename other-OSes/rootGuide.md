@@ -28,7 +28,7 @@ libavahi-compat-libdnssd-dev libldap2-dev \
  python3-dev python3-numpy libxml2-dev libkrb5-dev \
 libgsl-dev qtwebengine5-dev nlohmann-json3-dev libmysqlclient-dev \
 libgl2ps-dev \
-liblzma-dev libxxhash-dev liblz4-dev libzstd-dev
+liblzma-dev libxxhash-dev liblz4-dev libzstd-dev libcurl4-openssl-dev
 ```
 
 > [!WARNING]
@@ -55,16 +55,16 @@ Per iniziare il download di ROOT copia quindi _il link_in blu corrispondente al 
 
 ```bash
 $ cd
-$ wget https://root.cern/download/root_v6.36.04.Linux-ubuntu24.04-x86_64-gcc13.3.tar.gz
+$ wget https://root.cern/download/root_v6.40.04.Linux-ubuntu26.04-x86_64-gcc15.2.tar.gz
 
---2024-09-18 21:42:05--  https://root.cern/download/root_v6.36.04.Linux-ubuntu24.04-x86_64-gcc13.3.tar.gz
+--2024-09-18 21:42:05--  https://root.cern/download/root_v6.40.04.Linux-ubuntu26.04-x86_64-gcc15.2.tar.gz
 ...
 ```
 
 Una volta completato il download, esegui l comando:
 
 ```bash
-tar -xzvf root_v6.36.04.Linux-ubuntu24.04-x86_64-gcc13.3.tar.gz
+tar -xzvf root_v6.40.04.Linux-ubuntu26.04-x86_64-gcc15.2.tar.gz
 ```
 
 > [!IMPORTANT]
@@ -102,15 +102,15 @@ ricordati poi di effettuare il salvataggio delle modifiche (`CTRL` + `S`).
 > ```bash
 > $ root
 >   ------------------------------------------------------------------
->  | Welcome to ROOT 6.36.04                        https://root.cern |
+>  | Welcome to ROOT 6.40.04                        https://root.cern |
 >  | (c) 1995-2025, The ROOT Team; conception: R. Brun, F. Rademakers |
->  | Built for linuxx8664gcc on Aug 25 2025, 00:00:00                 |
->  | From tags/6-36-04@6-36-04                                        |
->  | With g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-5)                |
+>  | Built for macosxarm64 on Aug 27 2026, 08:02:21                   |
+>  | From tags/6-40-04@6-40-04                                        |
+>  | With Apple clang version 21.0.0 (clang-2100.1.1.101) std202002   |
 >  | Try '.help'/'.?', '.demo', '.license', '.credits', '.quit'/'.q'  |
 >   ------------------------------------------------------------------
-> 
-> root [0] 
+>
+> root [0]
 > ```
 >
 > se l'installazione ha avuto successo, puoi uscire da ROOT digitando `.q` e premendo INVIO.
@@ -129,15 +129,15 @@ Una volta installato Homebrew, per installare ROOT, esegui il comando:
 > ```zsh
 > % root
 >   ------------------------------------------------------------------
->  | Welcome to ROOT 6.36.04                        https://root.cern |
+>  | Welcome to ROOT 6.40.04                        https://root.cern |
 >  | (c) 1995-2025, The ROOT Team; conception: R. Brun, F. Rademakers |
->  | Built for macosxarm64 on Aug 25 2025, 09:02:18                   |
->  | From tags/6-36-04@6-36-04                                        |
->  | With Apple clang version 17.0.0 (clang-1700.0.13.3)              |
+>  | Built for macosxarm64 on Aug 27 2026, 08:02:21                   |
+>  | From tags/6-40-04@6-40-04                                        |
+>  | With Apple clang version 21.0.0 (clang-2100.1.1.101) std202002   |
 >  | Try '.help'/'.?', '.demo', '.license', '.credits', '.quit'/'.q'  |
 >   ------------------------------------------------------------------
-> 
-> root [0] 
+>
+> root [0]
 > ```
 >
 > se l'installazione ha avuto successo, puoi uscire da ROOT digitando `.q` e premendo INVIO.
@@ -163,12 +163,12 @@ Warning in cling::IncrementalParser::CheckABICompatibility():
   Possible C++ standard library mismatch, compiled with _LIBCPP_ABI_VERSION '1'
   Extraction of runtime standard library version was: ''
    ------------------------------------------------------------------
-  | Welcome to ROOT 6.38.04                        https://root.cern |
+  | Welcome to ROOT 6.40.04                        https://root.cern |
   | (c) 1995-2025, The ROOT Team; conception: R. Brun, F. Rademakers |
-  | Built for macosxarm64 on Mar 11 2026, 21:39:24                   |
-  | From tags/6-38-04@6-38-04                                        |
+  | Built for macosxarm64 on Aug 27 2026, 08:02:2                    |
+  | From tags/6-40-04@6-40-04                                        |
   | With Apple clang version 17.0.0 (clang-1700.6.4.2) std201703     |
-  | Try '.help'/'.?', '.demo', '.license', '.credits', '.quit'/'.q'  |
+  | With Apple clang version 21.0.0 (clang-2100.1.1.101) std202002'  |
    ------------------------------------------------------------------
 ```
 
@@ -180,9 +180,9 @@ Warning: building from source is not supported!
 You're on your own. Failures are expected so don't create any issues, please!
 ==> Fetching downloads for: root
 ✔︎ API Source root.rb                                                                                                                  Verified      6.9KB/  6.9KB
-✔︎ Formula root (6.38.04)                                                                                                              Verified    386.7MB/386.7MB
+✔︎ Formula root (6.40.04)                                                                                                              Verified    386.7MB/386.7MB
 ==> Reinstalling root 
-==> cmake -S . -B builddir -DCLING_CXX_PATH=clang++ -DCMAKE_CXX_STANDARD=17 -DCMAKE_INSTALL_ELISPDIR=/opt/homebrew/Cellar/root/6.38.04/share/emacs/site-lisp/root
+==> cmake -S . -B builddir -DCLING_CXX_PATH=clang++ -DCMAKE_CXX_STANDARD=20 -DCMAKE_INSTALL_ELISPDIR=/opt/homebrew/Cellar/root/6.40.04/share/emacs/site-lisp/root
 ==> cmake --build builddir
 ==> ctest -R tutorial-tree --verbose --parallel 10 --test-dir builddir
 ==> cmake --install builddir
