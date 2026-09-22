@@ -4,7 +4,6 @@
   - [Prerequisiti: verifica della Build di Windows e download di Ubuntu dal Microsoft Store](#prerequisiti-verifica-della-build-di-windows-e-download-di-ubuntu-dal-microsoft-store)
   - [Installazione di WSL 2 - Build 19041 o superiore](#installazione-di-wsl-2---build-19041-o-superiore)
   - [Installazione manuale WSL 2 - Build 18362 o superiori](#installazione-manuale-wsl-2---build-18362-o-superiori)
-  - [Installazione manuale WSL 1 - Build da 16215 a 18360](#installazione-manuale-wsl-1---build-da-16215-a-18360)
   - [Configurare la distribuzione](#configurare-la-distribuzione)
     - [Aggiornamento dei pacchetti software](#aggiornamento-dei-pacchetti-software)
     - [Installazione degli strumenti di base](#installazione-degli-strumenti-di-base)
@@ -142,14 +141,6 @@ e **installalo**.
 
 Una volta installato il Sottosistema Windows per Linux passare alla sezione
 [Configurare la distribuzione](#configurare-la-distribuzione) di questa guida.
-
-## Installazione manuale WSL 1 - Build da 16215 a 18360
-
-Per il corso di programmazione per la fisica è suggerito utilizzare WSL2. Nel caso in cui il proprio dispositivo non lo
-supporti e non sia possibile aggiornare la versione di Windows installata, è possibile installare la versione precedente
-di WSL.
-
-Per installare WSL1 seguire i soli passaggi 1, 3 e 6 presentati nella sezione [precedente](#installazione-manuale-wsl-2---build-18362-o-superiori).
 
 ## Configurare la distribuzione
 
