@@ -21,7 +21,7 @@ libxext-dev libxft-dev libxpm-dev python3 libtbb-dev libvdt-dev libgif-dev
 Così come alcuni pacchetti, non strettamente necessari, ma fortemente consigliati:
 
 ```bash
-$ sudo apt install gfortran libpcre3-dev \
+$ sudo apt install gfortran libpcre2-dev \
 libglu1-mesa-dev libglew-dev libftgl-dev \
 libfftw3-dev libcfitsio-dev libgraphviz-dev \
 libavahi-compat-libdnssd-dev libldap2-dev \
