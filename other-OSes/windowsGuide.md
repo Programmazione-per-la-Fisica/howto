@@ -75,7 +75,7 @@ _stable_ più recenti), è possibile utilizzare il comando semplificato di insta
 > Prima dell'installazione, assicurarsi che gli strumenti di Virtualizzazione di Windows
 > siano attivi. Per farlo è sufficiente cercare nella barra Start `features`, aprendo
 > l'opzione `Attiva o disattiva funzionalità di Windows`. Da li assicurarsi che
-> `Piattaforma macchina virtuale` e `Piattaforma Windows Hypervisor` siano attive.
+> `Piattaforma macchina virtuale` e `Sottosistema Windows per Linux` siano attive.
 > Se non lo fossero, attivarle e cliccare OK. Il computer si riavvierà al termine.
 
 Per farlo è necessario aprire Powershell come Amministratore e lanciare il comando.
