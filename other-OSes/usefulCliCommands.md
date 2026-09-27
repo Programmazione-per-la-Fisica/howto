@@ -18,27 +18,35 @@ $ ls -l /home/user/Documents
 
 ## Comandi base (estratto)
 
-| Comando      | Descrizione                                 | Esempio                        | Opzioni frequenti                |
-|--------------|---------------------------------------------|--------------------------------|----------------------------------|
-| `mkdir`      | Crea una nuova cartella                     | `mkdir myFolder`               | `-p` (crea cartelle genitore)    |
-| `cp`         | Copia files e/o cartelle                    | `cp file.txt backup.txt`       | `-r` (ricorsivo per le cartelle) |
-| `mv`         | Sposta e/o rinomina files o cartelle        | `mv vecchio.txt nuovo.txt`     |                                  |
-| `touch`      | Crea un file vuoto                          | `touch notes.txt`              |                                  |
-| `cd`         | Cambia la cartella corrente                 | `cd Documents`                 |                                  |
-| `ls`         | Elenca files e/o cartelle                   | `ls -l`                        | `-t` (ordina per tempo), `-a` (mostra file nascosti) `-h` (dimensioni file leggibili) |
-| `pwd`        | Stampa la cartella di lavoro corrente       | `pwd`                          |                                  |
-| `rm`         | Rimuovi files e/o cartelle                  | `rm file.txt`                  | `-r` (ricorsivo per file e le cartelle), `-i` (richiede conferma in merito ai file e cartelle da cancellare) |
-| `file`       | Determina la tipologia di un file           | `file script.sh`               |                                  |
+| Comando   | Descrizione                           | Esempio                      | Opzioni frequenti                                                                                                |
+| --------- | ------------------------------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `mkdir` | Crea una nuova cartella               | `mkdir myFolder`           | `-p` (crea cartelle genitore)                                                                                  |
+| `cp`    | Copia files e/o cartelle              | `cp file.txt backup.txt`   | `-r` (ricorsivo per le cartelle)                                                                               |
+| `mv`    | Sposta e/o rinomina files o cartelle  | `mv vecchio.txt nuovo.txt` |                                                                                                                  |
+| `touch` | Crea un file vuoto                    | `touch notes.txt`          |                                                                                                                  |
+| `cd`    | Cambia la cartella corrente           | `cd Documents`             |                                                                                                                  |
+| `ls`    | Elenca files e/o cartelle             | `ls -l`                    | `-t` (ordina per tempo), `-a` (mostra file nascosti) `-h` (dimensioni file leggibili)                      |
+| `pwd`   | Stampa la cartella di lavoro corrente | `pwd`                      |                                                                                                                  |
+| `rm`    | Rimuovi files e/o cartelle            | `rm file.txt`              | `-r` (ricorsivo per file e le cartelle), `-i` (richiede conferma in merito ai file e cartelle da cancellare) |
+| `file`  | Determina la tipologia di un file     | `file script.sh`           |                                                                                                                  |
 
-## Percorsi (Paths)
+## Percorsi (paths)
 
-- **Path assoluti**:  
-    Il percorso completo dalla radice del filesystem (inizia sempre con `/`).
-    Esempio: `/Users/username/Documents/file.txt`
+- **Path assoluti**:Il percorso completo dalla radice del filesystem (inizia sempre con `/`).
+  Esempio: `/Users/username/Documents/file.txt`
+- **Path relativi**:
+  Il percorso relativo alla cartella corrente (dipende da dove ti trovi, non inizia con `/`).
+  Esempio: `Documents/file.txt` (se sei in `/Users/username`)
 
-- **Path relativi**:  
-    Il percorso relativo alla cartella corrente (dipende da dove ti trovi, non inizia con `/`).
-    Esempio: `Documents/file.txt` (se sei in `/Users/username`)
+## Combinazioni di tasti utili
+
+| Combinazione di tasti | Descrizione                                  |
+| --------------------- | -------------------------------------------- |
+| `CTRL+A`              | salta all'inizio di una riga                 |
+| `CTRL+E`              | salta alla fine di una riga                  |
+| `TAB`                 | auto-completamento di un path                |
+| `↑`  o `↓`            | scorre lo storico dei comandi                |
+| `CTRL+R`              | ricerca a ritroso nello storico dei comandi  |
 
 ## Suggerimenti utili
 
