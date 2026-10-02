@@ -102,5 +102,5 @@ Fisica.
 
 ### Tastiera italiana per sviluppatori
 
-In [questa pagina](tastiere-sviluppatori/README.md) trovate le istruzioni per installare una tastiera italiana per
+In [questa pagina](developer-keyboard/README.md) trovate le istruzioni per installare una tastiera italiana per
 sviluppatori, utile per scrivere codice in C++ senza dover cambiare layout di tastiera.
