@@ -6,7 +6,9 @@
 - [Altre piattaforme](#altre-piattaforme)
 - [Editor](#editor)
 - [Introduzione a Linux e all'uso della command line](#introduzione-a-linux-e-alluso-della-command-line)
-- [Appendice: ROOT](#appendice-root)
+- [Appendice](#appendice)
+  - [ROOT](#root)
+  - [Tastiera italiana per sviluppatori](#tastiera-italiana-per-sviluppatori)
 
 Questa repository contiene la documentazione necessaria per configurare l'ambiente di lavoro per l'insegnamento di
 _[Programmazione per la Fisica](https://github.com/Programmazione-per-la-Fisica/pf2026)_,
@@ -90,8 +92,15 @@ Inoltre possono risultare utili le seguenti pagine web:
 
 Trovate un foglio riepilogativo dei comandi di uso più comune in [questa pagina](other-OSes/usefulCliCommands.md).
   
-## Appendice: ROOT
+## Appendice
+
+### ROOT
 
 Oltre agli strumenti necessari per il corso, è fornita [una guida](other-OSes/rootGuide.md) per l'installazione del
 [framework di analisi _ROOT_](https://root.cern/), che verrà utilizzato in altri insegnamenti del corso di laurea in
 Fisica.
+
+### Tastiera italiana per sviluppatori
+
+In [questa pagina](tastiere-sviluppatori/README.md) trovate le istruzioni per installare una tastiera italiana per
+sviluppatori, utile per scrivere codice in C++ senza dover cambiare layout di tastiera.
